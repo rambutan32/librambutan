@@ -1,0 +1,7 @@
+MCU := STM32F401VGT6
+PRODUCT_ID := 0003
+ERROR_LED_PORT := GPIOD
+ERROR_LED_PIN  := 12
+MCU_SERIES := stm32f4
+MCU_F4_LINE := dynamic_efficiency
+LD_MEM_DIR := sram_64k_flash_256k
