@@ -26,8 +26,8 @@
 
 /**
  * @file   wirish/boards/maple/include/board/board.h
- * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief  Maple board header.
+ * @author Perry Huang <iperry@leaflabs.com>, Bryan Newbold <bnewbold@robocracy.org
+ * @brief  STM32F401C Discovery board file.
  */
 
 #ifndef _BOARD_STM32F401_DISCOVERY_H_
