@@ -45,11 +45,15 @@
 // or setup() are called.
 //
 // If there's nothing special you need done, feel free to leave this
-// function out, as we do here.
-/*
+// function out.
 void boardInit(void) {
+    // Disable on-board MEMS Gycroscope by pulling PE3 high (nCS line).
+    // If this isn't done, use of SPI peripheral 1 will fail mysteriously due
+    // to the Gyro writing to MISO.
+    // To re-enable and use the gyro, pull PE3 (D67) low in setup().
+    gpio_set_mode(GPIOE, 3, GPIO_MODE_OUTPUT);
+    gpio_write_bit(GPIOE, 3, 1);
 }
-*/
 
 // Pin map: this lets the basic I/O functions (digitalWrite(),
 // analogRead(), pwmWrite()) translate from pin numbers to STM32
