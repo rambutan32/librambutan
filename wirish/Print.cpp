@@ -196,7 +196,7 @@ void Print::printNumber(unsigned long long n, uint8 base) {
  * nextafter((double)numeric_limits<long long>::max(), 0.0) ~= 9.22337e+18
  *
  * This slightly smaller value was picked semi-arbitrarily. */
-#define LARGE_DOUBLE_TRESHOLD (9.1e18)
+#define LARGE_DOUBLE_TRESHOLD ((double)9.1e18)
 
 /* THIS FUNCTION SHOULDN'T BE USED IF YOU NEED ACCURATE RESULTS.
  *
@@ -211,7 +211,7 @@ void Print::printNumber(unsigned long long n, uint8 base) {
 void Print::printFloat(double number, uint8 digits) {
     // Hackish fail-fast behavior for large-magnitude doubles
     if (abs(number) >= LARGE_DOUBLE_TRESHOLD) {
-        if (number < 0.0) {
+        if (number < (double)0.0) {
             print('-');
         }
         print("<large double>");
@@ -219,16 +219,16 @@ void Print::printFloat(double number, uint8 digits) {
     }
 
     // Handle negative numbers
-    if (number < 0.0) {
+    if (number < (double)0.0) {
         print('-');
         number = -number;
     }
 
     // Simplistic rounding strategy so that e.g. print(1.999, 2)
     // prints as "2.00"
-    double rounding = 0.5;
+    double rounding = (double)0.5;
     for (uint8 i = 0; i < digits; i++) {
-        rounding /= 10.0;
+        rounding /= (double)10.0;
     }
     number += rounding;
 
@@ -244,7 +244,7 @@ void Print::printFloat(double number, uint8 digits) {
 
     // Extract digits from the remainder one at a time
     while (digits-- > 0) {
-        remainder *= 10.0;
+        remainder *= (double)10.0;
         int to_print = (int)remainder;
         print(to_print);
         remainder -= to_print;
