@@ -46,6 +46,8 @@
  * notice.
  */
 
+#pragma GCC diagnostic ignored "-Wunused-function"
+
 #include <wirish/boards.h>
 #include <libmaple/libmaple_types.h>
 #include <libmaple/flash.h>
