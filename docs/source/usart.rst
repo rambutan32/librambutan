@@ -31,10 +31,10 @@ Which pins correspond to the USART TX and RX pins are given on your
 board's silkscreen, and also in the board-specific USART pin maps
 available here:
 
-* :ref:`Maple <maple-usart-map>`
-* :ref:`Maple RET6 Edition <maple-ret6-usart-map>`
-* :ref:`Maple Mini <maple-mini-usart-map>`
-* :ref:`Maple Native Beta <maple-native-b-usart-map>`
+* `Leaflabs Maple`_
+* `Leaflabs Maple RET6`_
+* `Leaflabs Maple Mini`_
+* `Leaflabs Maple Native Beta`_
 
 If you use a particular serial port, you cannot also use its
 communication pins for other purposes at the same time.

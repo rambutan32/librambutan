@@ -420,8 +420,8 @@ Which could plausibly be turned into the final source file ::
 Recommended Reading
 -------------------
 
-* :ref:`Your board's documentation <index-boards>` page, which
-  includes references to the relevant ST materials (reference manual,
+* Your board's documentation, which should include
+  references to the relevant ST materials (reference manual,
   datashseet, etc.) for your board.
 * `ARM Cortex-M3 Technical Reference Manual, Revision r1p1 <http://infocenter.arm.com/help/topic/com.arm.doc.ddi0337e/DDI0337E_cortex_m3_r1p1_trm.pdf>`_
   (PDF).  This ARM manual specifies the Cortex-M3 architecture,

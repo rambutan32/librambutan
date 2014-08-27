@@ -15,9 +15,8 @@ The pins which support PWM have ``PWM`` listed underneath their number
 on your board's silkscreen.  These pin numbers are available to your
 program in the :ref:`boardPWMPins <lang-board-values-pwm-pins>`
 board-specific array.  The number of pins which are capable of PWM on
-your board is given by the ``BOARD_NR_PWM_PINS`` constant.  These
-values are documented for each board in the :ref:`Board Hardware
-Documentation <index-boards>` pages.
+your board is given by the ``BOARD_NR_PWM_PINS`` constant. See your
+board's documentation for these values.
 
 The Arduino function :ref:`analogWrite() <lang-analogwrite>` is an
 alias for ``pwmWrite()``, but it is badly named, and its use is

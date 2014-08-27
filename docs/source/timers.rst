@@ -82,10 +82,10 @@ you want to use both timer interrupts and PWM in the same program.
 Refer to your board's timer pin map to match up timer channels and pin
 numbers:
 
-* :ref:`Maple <maple-timer-map>`
-* :ref:`Maple RET6 Edition <maple-ret6-timer-map>`
-* :ref:`Maple Mini <maple-mini-timer-map>`
-* :ref:`Maple Native Beta <maple-native-b-timer-map>`
+* `Leaflabs Maple`_
+* `Leaflabs Maple RET6`_
+* `Leaflabs Maple Mini`_
+* `Leaflabs Maple Native Beta`_
 
 Overhead
 ^^^^^^^^

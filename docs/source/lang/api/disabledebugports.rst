@@ -30,4 +30,6 @@ See Also
 --------
 
 - :ref:`lang-enabledebugports`
-- :ref:`Important erratum on Maple pin 43 <maple-nrst-pb4>`
+- Important erratum on Maple pin 43
+
+.. TODO direct off-site link to <maple-nrst-pb4>

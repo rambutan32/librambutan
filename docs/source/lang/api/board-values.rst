@@ -7,8 +7,8 @@ Board-Specific Values
 
 There are a number of board-specific values: constants or variables
 which are different depending on which LeafLabs board you have.  The
-exact values for each board are given in your :ref:`board's hardware
-documentation <index-boards>`.
+exact values for each board are given in your board's hardware
+documentation.
 
 This page lists and documents the board-specific values.  You should
 use these when appropriate in your own programs.  This will help make
@@ -122,8 +122,8 @@ Constants
   <lang-board-values-used-pins>`).  However, they can be used as
   ordinary GPIOs if you call the :ref:`lang-disabledebugports`
   function.  (Be careful with this on the Maple and Maple RET6
-  Edition, as writing to ``BOARD_NJTRST_PIN`` :ref:`may cause your
-  board to reset <maple-nrst-pb4>`\ !).
+  Edition, as writing to ``BOARD_NJTRST_PIN`` may cause your
+  board to reset!).
 
 .. _lang-board-values-pwm-pins:
 

@@ -53,18 +53,3 @@ Contents in Full
    systick
    usb
    usart
-
-.. _index-boards:
-
-**Boards**
-
-.. toctree::
-   :maxdepth: 2
-
-   hardware/maple.rst
-   hardware/maple-ret6.rst
-   hardware/maple-mini.rst
-   hardware/maple-native-beta.rst
-
-.. TODO [Maple Native] write/include upon finished Native release
-..    hardware/maple-native.rst

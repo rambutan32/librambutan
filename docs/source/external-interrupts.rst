@@ -37,10 +37,10 @@ interrupts at a time [#fextisports]_.
 The EXTI Line Pin Map for your board lists which pins connect to which
 EXTI lines:
 
-* :ref:`Maple <maple-exti-map>`
-* :ref:`Maple RET6 Edition <maple-ret6-exti-map>`
-* :ref:`Maple Mini <maple-mini-exti-map>`
-* :ref:`Maple Native Beta <maple-native-b-exti-map>`
+* `Leaflabs Maple`_
+* `Leaflabs Maple RET6`_
+* `Leaflabs Maple Mini`_
+* `Leaflabs Maple Native Beta`_
 
 Function Reference
 ------------------

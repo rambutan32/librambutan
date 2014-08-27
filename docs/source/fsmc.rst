@@ -30,4 +30,6 @@ Recommended Reading
 -------------------
 
 - Wikipedia article on `SRAM <http://en.wikipedia.org/wiki/Static_random-access_memory>`_
-- :ref:`ST RM0008 <maple-native-b-stdocs>` chapter on FSMC.
+- ST RM0008 chapter on FSMC.
+
+.. TODO direct link to ST RM0008

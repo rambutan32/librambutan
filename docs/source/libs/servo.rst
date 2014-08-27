@@ -53,7 +53,7 @@ to attach to pins that support PWM**.
 To determine if a pin supports PWM, you can either check if "PWM"
 appears next to its number on your board's silkscreen, or look for it
 in the list of :ref:`boardPWMPins <lang-board-values-pwm-pins>` in
-your board's :ref:`hardware documentation <index-boards>`.
+your board's hardware documentation.
 
 RC Servos expect a pulse approximately every 20ms.  In the Maple
 implementation, :ref:`periods <lang-hardwaretimer-setperiod>` are set

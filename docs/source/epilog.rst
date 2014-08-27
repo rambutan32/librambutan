@@ -12,3 +12,7 @@
 .. _Git: http://git-scm.com/
 .. _dfu-util: http://wiki.openmoko.org/wiki/Dfu-util
 .. _easy_install: http://packages.python.org/distribute/easy_install.html
+.. _Leaflabs Maple: http://leaflabs.com/docs/hardware/maple-mini.html
+.. _Leaflabs Maple RET6: http://leaflabs.com/docs/hardware/maple-ret6.html
+.. _Leaflabs Maple Mini: http://leaflabs.com/docs/hardware/maple-mini.html
+.. _Leaflabs Maple Native Beta: http://leaflabs.com/docs/hardware/maple-native-beta.html

@@ -40,9 +40,8 @@ listed underneath their number on your board's silkscreen.  These pin
 numbers are available to your program in the :ref:`boardADCPins
 <lang-board-values-adc-pins>` board-specific array.  The number of
 pins which are capable of analog to digital conversion on your board
-is given by the ``BOARD_NR_ADC_PINS`` constant.  These values are
-documented for each board in the :ref:`Board Hardware Documentation
-<index-boards>` pages.
+is given by the ``BOARD_NR_ADC_PINS`` constant. See your board's
+documentation for these values.
 
 .. note:: Pin 3 is not marked ``AIN`` on the silkscreen for Maple
    revisions through Rev 5; however **it does work** as an analog
