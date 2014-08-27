@@ -10,9 +10,6 @@ Contents in Full
 .. toctree::
    :maxdepth: 2
 
-   maple-quickstart
-   maple-ide-install
-   ide
    unix-toolchain
    unix-toolchain-linux-setup
    unix-toolchain-osx-setup

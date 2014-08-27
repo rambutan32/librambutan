@@ -7,9 +7,7 @@ Wire
 
 .. TODO [0.1.0] Format this correctly, using Breathe
 
-This page documents the Wire library for the :ref:`i2c` protocol.  You
-can use this library in the :ref:`Maple IDE <ide>` by choosing the
-Wire item under the Sketch > Import Library... menu.
+This page documents the Wire library for the :ref:`i2c` protocol.
 
 If you are using the :ref:`Unix toolchain <unix-toolchain>`, the
 library is located in the ``/libraries/Wire/`` :ref:`libmaple`

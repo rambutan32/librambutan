@@ -9,9 +9,6 @@ This documents the Servo library for controlling RC servomotors.  It
 is implemented as a thin layer over the built-in :ref:`timer
 peripherals <timers>`.
 
-You can use this library in the :ref:`IDE <ide>` by choosing the Servo
-item under the Sketch > Import Library... menu.
-
 If you are using the :ref:`Unix toolchain <unix-toolchain>`, the
 library is located in the ``/libraries/Servo/`` :ref:`libmaple`
 directory.

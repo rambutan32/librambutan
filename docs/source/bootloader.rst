@@ -586,8 +586,8 @@ Flashing A Custom Bootloader
 
 .. warning:: This section is for users who want to put a fresh or
    custom bootloader on their board.  It's possible to make a mistake
-   in this process and e.g. render your Maple unable to communicate
-   with the IDE.  Know what you're doing, and proceed with caution.
+   in this process and e.g. render your Maple unable to communicate.
+   Know what you're doing, and proceed with caution.
 
 The STM32 microprocessor on the Maple comes with a built-in serial
 bootloader that can be used to flash a new (software) bootloader onto
@@ -720,13 +720,6 @@ You can also run the following to get usage information::
 
 If all goes well, you'll see a bunch of output, then "Verification
 OK".  Your board now has a fresh bootloader installed.
-
-The first time you upload a program after installing a new bootloader,
-there is no need to select a serial port in the :ref:`IDE <ide>`
-[#fbootser]_.  Perform this first upload with no serial port selected.
-The IDE will emit a warning about not finding a serial port, but the
-upload will still succeed.  In subsequent uploads, select a serial
-port as you normally would.
 
 If something goes wrong, the `forum`_ is probably your best bet for
 obtaining help, with IRC (server irc.freenode.net, channel

@@ -45,8 +45,7 @@ My board is bricked! I can't upload via the bootloader no matter what!
 ----------------------------------------------------------------------
 
 Don't panic.  First, make sure that the board is plugged in correctly
-for program upload, using the instructions given in the
-:ref:`quickstart <maple-quickstart-upload>`.  If that doesn't work,
+for program upload.  If that doesn't work,
 try using :ref:`perpetual bootloader mode
 <troubleshooting-perpetual-bootloader>`.
 
@@ -94,21 +93,10 @@ the serial bootloader, but we haven't tried.
 -------------------------
 
 There is probably a simple way to get autoconfiguration working with
-devfs; in the meantime, you could try running the entire IDE as root.
+devfs; in the meantime, you could try running the programmer as root.
 
 .. TODO: be more helpful
 
-.. _troubleshooting-ide-usage:
-
-==============
- IDE problems
-==============
-
-[Mac OS X] The "Board" and "Serial Port" menu items are missing!
-----------------------------------------------------------------
-
-Sometimes this happens if you try to compile or upload without having
-a board selected.  The work-around is to restart the IDE. Mysterious!
 
 .. _troubleshooting-compilation:
 
@@ -130,9 +118,8 @@ found by the compiler. Your program must include both ``void setup()``
 and ``void loop()`` functions; they don't have to do anything, but
 they **must** be there.
 
-You can start with an example program (to see one in the IDE, click on
-File > Examples > Stubs > BareMinimum) to get the basic structure.
-See also the :ref:`language <language>` documentation.
+You can start with an example program (``./examples``) to get the basic
+structure.  See also the :ref:`language <language>` documentation.
 
 This is a common error when your entire sketch is blank.
 
@@ -176,7 +163,7 @@ This can also happen if you disable the USB peripheral, e.g. using
 I have multiple boards plugged in; how do I know which one will get programmed?
 -------------------------------------------------------------------------------
 
-Because the Maple IDE uses DFU to upload programs, you can't select a
+Because the programmer uses DFU to upload programs, you can't select a
 particular board to upload to.  There's no solution to this problem
 for now: you'll have to just plug in your boards one at a time. If
 this is a real problem, let us know, and we'll see if we can come up

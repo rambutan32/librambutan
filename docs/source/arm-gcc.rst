@@ -16,9 +16,6 @@ not intended as a reference manual for GCC; such manuals are available
 Obtaining ``arm-none-eabi-gcc``
 -------------------------------
 
-Recent versions of ``arm-none-eabi-gcc`` and associated tools are
-included with the :ref:`Maple IDE <ide>`.
-
 Users who wish to use ``arm-none-eabi-gcc`` directly, along with a
 standard Unix Make-based toolchain, should read the
 :ref:`unix-toolchain`, which describes how to set up such an
@@ -35,10 +32,9 @@ Compiler Flags Used by libmaple
 -------------------------------
 
 This section documents the flags passed to ``arm-none-eabi-gcc`` by
-the :ref:`Maple IDE <ide>` and the default Makefile provided with the
-:ref:`Unix toolchain <unix-toolchain>`.  The information in this
-section is subject to change between :ref:`libmaple <libmaple>`
-releases.
+the default Makefile provided with the :ref:`Unix toolchain <unix-toolchain>`.
+The information in this section is subject to change between :ref:`libmaple
+<libmaple>` releases.
 
 .. highlight:: sh
 
@@ -63,8 +59,7 @@ The following flags are among those passed to the assembler::
 Using the C Standard Library
 ----------------------------
 
-By default (under both the :ref:`Maple IDE <ide>` and the :ref:`Unix
-toolchain <unix-toolchain>`), ``arm-none-eabi-gcc`` is configured to
+By default, ``arm-none-eabi-gcc`` is configured to
 link against `newlib <http://sourceware.org/newlib/>`_, a C standard
 library intended for use with embedded applications.  You are free to
 include of any of its headers.

@@ -5,7 +5,7 @@ What's New
 
 .. FIXME [RELEASE] finish.
 
-This page tracks updates to libmaple and MapleIDE.
+This page tracks updates to libmaple.
 
 .. contents::
    :local:

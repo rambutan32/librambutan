@@ -10,8 +10,8 @@
 .. Note: if you port an Arduino library and document it here, be sure
 .. to update compatibility.rst to reflect that fact.
 
-This page lists the extra libraries that are part of the :ref:`Maple
-IDE <ide>` (along with the rest of :ref:`libmaple <libmaple>`). You
+This page lists the extra libraries that are part of 
+:ref:`libmaple <libmaple>`. You
 can use a library from within a sketch by going to Sketch > Import
 Library... from within the IDE, then choosing the library you want.
 

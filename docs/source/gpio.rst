@@ -62,7 +62,7 @@ letter and bit number.  For instance, "PA4" is GPIO port A, bit 4.
 Pin Maps
 --------
 
-Part of :ref:`Maple IDE's <ide>` job is to convert normal pin numbers
+Part of the library's job is to convert normal pin numbers
 into the corresponding GPIO port and bit when you call functions like
 :ref:`lang-pinmode`.  It does this using a *pin map*, which lists the
 GPIO port and bit for each pin number.  The GPIO documentation for

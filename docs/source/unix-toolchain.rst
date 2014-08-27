@@ -8,8 +8,7 @@
 
 This is a tutorial for using a standard Unix toolchain (``make``,
 ``gcc``, etc.) with Maple.  It's intended for C and C++ programmers
-who want to use :ref:`libmaple` directly. If you're just beginning, we
-recommend installing :ref:`Maple IDE <maple-ide-install>` instead.
+who want to use :ref:`libmaple` directly.
 
 .. contents:: Contents
    :local:
@@ -17,9 +16,7 @@ recommend installing :ref:`Maple IDE <maple-ide-install>` instead.
 Requirements
 ------------
 
-We assume you've had success with the :ref:`Maple IDE <ide>` (this is
-important on Windows, as this document doesn't cover :ref:`driver
-installation <maple-ide-install-windows-drivers>`).
+For Windows, you will somehow need to install drivers.
 
 At a minimum, you need:
 
@@ -182,8 +179,7 @@ over a :ref:`USB serial port <usb>`.
 * Linux: you need udev rules set up :ref:`as described in the setup
   doc <toolchain-udev>`.
 
-* Windows: you need to :ref:`install the Maple's device drivers
-  <maple-ide-install-windows-drivers>`.
+* Windows: you need to somehow install drivers.
 
 * OS X: everything Just Works for you. Aren't you special?
 
@@ -229,8 +225,7 @@ To open up a session on Linux or OS X, run ::
 
   $ screen /dev/ttyXXX
 
-(On Windows, you will need to use a separate program, such as Maple
-IDE's serial console or `PuTTY
+(On Windows, you will need to use a separate program, such as `PuTTY
 <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_.)
 
 ``screen`` will present you an empty terminal.  Your board is waiting
@@ -318,11 +313,8 @@ We do our best to keep the master libmaple branch on GitHub free from
 broken or half-finished code, so don't be too scared running the
 latest and greatest. If you do, please report any bugs or regressions!
 
-We keep releases of libmaple and the Maple IDE in lockstep, so any IDE
-updates will have corresponding library updates.  Our `blog
-<http://leaflabs.com/blog/>`_ is the place to watch for major
-releases; an `RSS feed <http://leaflabs.com/blog/feed/>`_ is
-available.
+Our `blog <http://leaflabs.com/blog/>`_ is the place to watch for major
+releases; an `RSS feed <http://leaflabs.com/blog/feed/>`_ is available.
 
 You can sign up for a free `GitHub <https://github.com/plans>`_
 account and `watch libmaple

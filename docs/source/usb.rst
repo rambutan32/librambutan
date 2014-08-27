@@ -9,9 +9,9 @@ The STM32 microprocessors include a dedicated USB peripheral which can
 be configured to act as a general USB slave device with transfer rates
 up to 12Mbps. (It unfortunately can't be configured as a host or
 on-the-go device).  By default, the peripheral is configured for two
-uses: first, to receive sketch/program uploads from the :ref:`IDE
-<ide>`, and second, to emulate a regular serial port for use as a
-terminal (text read/write).
+uses: first, to receive sketch/program uploads from the programming utility,
+and second, to emulate a regular serial port for use as a terminal (text
+read/write).
 
 The emulated terminal is relatively slow and inefficient; it is best
 for transferring data at regular serial speeds (kilobaud).  Library
@@ -22,7 +22,7 @@ The SerialUSB channel is used with the :ref:`Maple bootloader
 <bootloader>` to reprogram the board: a :ref:`magic sequence of
 control line toggles and transmitted data <bootloader-rev3>` causes a
 Maple to reset itself and enter bootloader mode. As an unfortunate
-consequence, the auto-reset will not work if the IDE can not access
+consequence, the auto-reset will not work if the programmer can not access
 the serial port, either due to a conflict with another program (serial
 monitor) or because the interface has been disabled from the Maple
 side (through :ref:`SerialUSB.end() <lang-serialusb-end>`).  A

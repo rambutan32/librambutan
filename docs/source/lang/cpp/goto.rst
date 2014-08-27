@@ -44,7 +44,7 @@ be a label.
 
 Let's say that we wanted to print ``x`` only if it was very large, say
 at least 2000.  We might want to do this just so anybody watching on a
-:ref:`serial monitor <ide-serial-monitor>` would know they were in for
+serial port monitor would know they were in for
 a longer wait than usual.  We can accomplish this through the use of a
 ``goto`` statement that skips the printing if ``x`` is less than
 2000::

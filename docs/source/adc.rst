@@ -15,8 +15,6 @@ ADC On Maple
 ------------
 
 Doing analog-to-digital conversion on the Maple is simple.
-:ref:`Maple IDE <ide>` contains a basic example.  To see it, choose
-Analog > AnalogInSerial from the :ref:`examples menu <ide-examples>`.
 
 In order to set up your board for conversion, first connect the wire
 (potentiometer, etc.)  with the voltage you want to measure to a

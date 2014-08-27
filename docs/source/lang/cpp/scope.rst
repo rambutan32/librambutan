@@ -19,7 +19,7 @@ Global and Local Variables
 --------------------------
 
 A global variable is one that can be "seen" by every function in a
-program.  In the :ref:`Maple IDE <ide>`, any variable declared outside
+program.  In Wirish, any variable declared outside
 of a function (like :ref:`setup() <lang-setup>` and :ref:`loop()
 <lang-loop>`) is a global variable.
 
@@ -43,8 +43,7 @@ Example
 Here is an example sketch (which you can copy into the Maple IDE and
 run on your Maple) that illustrates the use of global and local
 variables, as well as declaring variables inside of a ``for`` loop.
-Be sure to open a :ref:`serial monitor <ide-serial-monitor>` after you
-:ref:`verify <ide-verify>` and :ref:`upload <ide-upload>` the sketch::
+Be sure to open a serial port monitor after you upload the sketch::
 
     int globalVar;  // any function will see this variable
 

@@ -35,8 +35,7 @@ Example
 
 The following sketch initializes the random seed based on an :ref:`ADC
 <adc>` reading of pin 0.  If this pin is unconnected, the Sketch
-should print different values to the :ref:`serial monitor
-<ide-serial-monitor>` each time it is run::
+should print different values to the serial port monitor each time it is run::
 
     long randNumber;
 
