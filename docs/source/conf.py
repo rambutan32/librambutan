@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# libmaple documentation build configuration file, created by
+# librambutan documentation build configuration file, originally created by
 # sphinx-quickstart on Thu Oct  7 06:42:30 2010.
 #
 # This file is execfile()d with the current directory set to its
@@ -49,8 +49,8 @@ source_suffix = '.rst'
 master_doc = 'contents'
 
 # General information about the project.
-project = u'Maple'
-copyright = u'2010, 2011, LeafLabs, LLC'
+project = u'librambutan'
+copyright = u'2010, 2011, LeafLabs, LLC. 2014 Various Contributors.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -209,7 +209,7 @@ html_use_index = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'mapledoc'
+htmlhelp_basename = 'librambutandoc'
 
 
 # -- Options for LaTeX output -------------------------------------------------
@@ -223,8 +223,8 @@ htmlhelp_basename = 'mapledoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target file, title, author, documentclass [howto/manual])
 latex_documents = [
-  ('index', 'maple.tex', u'Maple Documentation',
-   u'LeafLabs, LLC', 'manual'),
+  ('index', 'librambutan.tex', u'librambutan Documentation',
+   u'LeafLabs, LLC and Contributors', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -256,8 +256,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'maple', u'Maple Documentation',
-     [u'LeafLabs, LLC'], 1)
+    ('index', 'librambutan', u'librambutan Documentation',
+     [u'LeafLabs, LLC and Contributors'], 1)
 ]
 
 
