@@ -267,16 +267,16 @@ man_pages = [
 
 # -- Options for breathe integration ------------------------------------------
 
-# We allow people to check in Doxygen XML into maintenance branches.
+# Check to see if doxygen has been run yet
 doxygen_xml_maybe = os.path.join(os.path.dirname(os.path.dirname(__file__)),
-                                 'doxygen', 'xml')
+                                 '..', 'doxygen', 'xml')
 if os.path.isdir(doxygen_xml_maybe):
     # There's a doxygen/xml/ directory in this repository root, use that.
     doxygen_xml_dir = doxygen_xml_maybe
 else:
-    # Nothing there, assume it's in LIB_MAPLE_HOME.
-    doxygen_xml_dir = os.path.join(os.environ['LIB_MAPLE_HOME'],
-                                   'doxygen', 'xml')
+    print("FAIL: doxygen hasn't been run yet in this repository; "
+          "see ../README")
+    sys.exit(-1)
 
 breathe_projects = {'libmaple' : doxygen_xml_dir}
 

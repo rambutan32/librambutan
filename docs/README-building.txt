@@ -44,11 +44,9 @@ and Breathe).
    - Everyone else, clone without them:
      $ git clone git://github.com/leaflabs/breathe.git
 
-4. After that's done, set environment variables LIB_MAPLE_HOME to
-   point to libmaple, and BREATHE_HOME to point to Breathe.  Something
-   like this in Bash:
+4. After that's done, set environment variable BREATHE_HOME to point to
+   Breathe.  Something like this in Bash:
 
-   $ export LIB_MAPLE_HOME=/path/to/libmaple/repo/
    $ export BREATHE_HOME=/path/to/breathe/repo/
 
    (You'll want this in your shell startup script.)
@@ -63,14 +61,14 @@ produce Doxygen XML output, then you can generate the final HTML docs.
    comments in the libmaple source code are changed), you'll need to
    re-run doxygen on libmaple.
 
-    $ cd /path/to/libmaple
+    $ cd /path/to/top/level
     $ make doxygen
 
    Doxygen will yell at you a lot; it's generally safe to ignore it.
 
 2. Finally, you can build the HTML (in the leaflabs-docs repository):
 
-    $ cd /path/to/leaflabs-docs
+    $ cd /path/to/docs
     $ make html
 
    On Windows, you can supposedly use the batch file make.bat instead.
