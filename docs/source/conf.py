@@ -123,7 +123,8 @@ html_theme = '_better_theme'
 html_theme_options = {
         'showrelbartop': False,
         'showrelbarbottom': True,
-        'cssfiles': ['_static/rambutan-docs.css'],
+        'cssfiles': ['_static/rambutan-docs.css',
+                     '_static/pygments-solarized-dark.css'],
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
