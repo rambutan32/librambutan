@@ -20,7 +20,7 @@ Types
 .. doxygenenum:: dma_channel
 .. doxygenenum:: dma_priority
 .. doxygenenum:: dma_irq_cause
-.. doxygenstruct:: dma_channel_reg_map
+.. doxygendefine:: dma_channel_reg_map
 
 Devices
 -------
@@ -42,8 +42,8 @@ Functions
 .. doxygenfunction:: dma_disable
 .. doxygenfunction:: dma_set_mem_addr
 .. doxygenfunction:: dma_set_per_addr
-.. doxygenfunction:: dma_channel_regs
-.. doxygenfunction:: dma_is_channel_enabled
+.. doxygendefine:: dma_channel_regs
+.. doxygendefine:: dma_is_channel_enabled
 .. doxygenfunction:: dma_get_isr_bits
 .. doxygenfunction:: dma_clear_isr_bits
 
