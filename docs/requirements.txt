@@ -1,0 +1,3 @@
+# This file is for readthedocs.org. virtualenv mode must be enabled and this
+# file pointed to from the readthedocs settings.
+breathe
