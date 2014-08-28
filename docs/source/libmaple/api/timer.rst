@@ -18,8 +18,11 @@ that there are advanced, general purpose, and basic timers.  Thus,
 each kind of timer has a register map type, and a ``union
 timer_reg_map`` ties it all together.
 
+.. TODO: seperate stm32f1/stm32f2 families correctly
+
 .. doxygenstruct:: timer_adv_reg_map
-.. doxygenstruct:: timer_gen_reg_map
+.. doxygenstruct:: stm32f1::timer_gen_reg_map
+.. doxygenstruct:: stm32f2::timer_gen_reg_map
 .. doxygenstruct:: timer_bas_reg_map
 .. doxygenunion:: timer_reg_map
 .. doxygenenum:: timer_type

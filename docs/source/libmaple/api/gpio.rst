@@ -13,15 +13,18 @@ Input/Output (AFIO) support.
 Types
 -----
 
-.. doxygenstruct:: gpio_reg_map
+.. TODO: seperate stm32f1/stm32f2 families correctly
+
+.. doxygenstruct:: stm32f1::gpio_reg_map
+.. doxygenstruct:: stm32f2::gpio_reg_map
 .. doxygenstruct:: gpio_dev
 .. doxygenenum:: gpio_pin_mode
 
-.. doxygenstruct:: afio_reg_map
-.. doxygenenum:: afio_exti_port
-.. doxygenenum:: afio_exti_num
-.. doxygenenum:: afio_remap_peripheral
-.. doxygenenum:: afio_debug_cfg
+.. doxygenstruct:: stm32f1::afio_reg_map
+.. doxygentypedef:: stm32f1::afio_exti_port
+.. doxygentypedef:: stm32f1::afio_exti_num
+.. doxygentypedef:: stm32f1::afio_remap_peripheral
+.. doxygentypedef:: stm32f1::afio_debug_cfg
 
 Devices
 -------

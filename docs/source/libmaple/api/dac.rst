@@ -12,8 +12,11 @@ Digital to Analog Conversion (DAC) support.
 Types
 -----
 
+.. TODO: refactor correctly for stm32f1/stm32f2 distinction
+
 .. doxygenstruct:: dac_dev
-.. doxygenstruct:: dac_reg_map
+.. doxygenstruct:: stm32f1::dac_reg_map
+.. doxygenstruct:: stm32f2::dac_reg_map
 
 Devices
 -------

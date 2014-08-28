@@ -12,7 +12,10 @@ Direct Memory Access (DMA) support.
 Types
 -----
 
-.. doxygenstruct:: dma_reg_map
+.. TODO: seperate stm32f1/stm32f2 families correctly
+
+.. doxygenstruct:: stm32f1::dma_reg_map
+.. doxygenstruct:: stm32f2::dma_reg_map
 .. doxygenstruct:: dma_dev
 .. doxygenstruct:: dma_handler_config
 .. doxygenenum:: dma_mode_flags
