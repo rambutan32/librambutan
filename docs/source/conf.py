@@ -12,7 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys, os, subprocess
 import os.path
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -249,6 +249,14 @@ man_pages = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'http://docs.python.org/': None}
+
+
+# -- Options for Read The Docs deployment -------------------------------------
+
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
+
+if read_the_docs_build:
+    subprocess.call('cd ../..; make doxygen', shell=True)
 
 
 # -- Options for breathe integration ------------------------------------------
