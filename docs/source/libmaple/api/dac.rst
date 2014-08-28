@@ -18,7 +18,10 @@ Types
 Devices
 -------
 
-.. doxygenvariable:: DAC
+.. TODO: This device doesn't get compiled in correctly yet
+   .. doxygenvariable:: DAC
+
+The ``DAC`` device is so-far undocumented.
 
 Functions
 ---------
