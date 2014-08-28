@@ -1,0 +1,132 @@
+/* Rambutan Documentation Stylesheet */
+/* Intended to be applied over the "better" theme's defaults */
+
+/* TODO: http://practicaltypography.com/rules-and-borders.html */
+
+body {
+    font-family: serif;
+    font-size: 16px;
+}
+
+.body {
+    font-size: 140%;
+    line-height: 125%;
+    color: rgb(72, 72, 72);
+}
+
+.sphinxsidebar {
+    padding-top: 6em;
+    opacity: 0.65;
+    font-size: 0.9rem;
+}
+
+.sphinxsidebar:hover {
+    opacity: 0.9;
+}
+
+.sphinxsidebar .search input {
+    padding-left: 0.25rem;
+    margin-bottom: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-family: "Helvetica", sans-serif;
+}
+
+h1 { font-size: 1.6em; font-weight: bold; }
+h2 { font-size: 1.3em; font-weight: normal; }
+h3 { font-size: 1.1em; font-weight: normal; }
+h4 { font-size: 1.0em; font-weight: normal; }
+h5 { font-size: 1.0em; font-weight: normal; }
+
+header h1 {
+    margin-top: 0.3em;
+    font-size: 1.2em;
+    opacity: 0.65;
+}
+
+header h1:hover {
+    opacity: 0.9;
+}
+
+.rubric {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a.toc-backref {
+    color: #000;
+}
+
+a.internal em {
+    font-style: normal;
+}
+
+footer#pagefooter, footer#pagefooter a {
+    color: #777;
+}
+
+.contents .topic-title {
+    font-weight: normal;
+}
+
+body > header h1 a, body > header h1 a:visited {
+    color: #000;
+    margin-left: 240px;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: normal;
+}
+
+.sphinxsidebar h3 a {
+    color: #444;
+}
+
+pre, tt {
+    font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
+}
+
+tt {
+    font-size: 80%;
+    background: #f4f4f4;
+}
+
+.note tt {
+    background: #ececec;
+}
+
+a tt {
+    font-weight: normal;
+}
+
+.highlight pre {
+    background-color: #FFF;
+    background-color: #333;
+    padding: 0.75em;
+    margin-bottom: 2em;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    line-height: 120%;
+}
+
+div.admondition, div.topic, div.warning, div.note {
+    border-left: none;
+    border-right: none;
+}
+
+div.note, div.topic {
+    background-color: #f4f4f4;
+}
+
+.related .bottom {
+    margin-top: 2em;
+}
+
+a:hover {
+    text-decoration: none;
+}

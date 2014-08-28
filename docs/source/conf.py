@@ -110,41 +110,26 @@ nitpicky = True
 
 # -- Options for HTML output --------------------------------------------------
 
+# Add any paths that contain custom themes here, relative to this directory.
+html_theme_path = ['.']
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = '_better_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-        ## Sidebar placement options
-        #'stickysidebar' : 'true',
-        'rightsidebar' : 'true',
-        #'collapsiblesidebar' : 'true',
-
-        ## Color
-        'sidebarbgcolor' : '#C8C8C8',
-        'sidebarlinkcolor' : 'green',
-        'sidebartextcolor' : 'black',
-        #'sidebarbtncolor' : 'black',
-        'footerbgcolor' : 'green',
-        'relbarbgcolor' : 'green',
-        'headlinkcolor' : '#000000',
-        'linkcolor' : 'green',
-        #'visitedlinkcolor' : 'green',
-
-        ## Font
-        'headfont' : 'Georgia',
-        'bodyfont' : 'Lucida'
+        'showrelbartop': False,
+        'showrelbarbottom': True,
+        'cssfiles': ['_static/rambutan-docs.css'],
 }
-
-# Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = ['_static']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = project + ' v' + release
+#html_title = project + ' v' + release
+html_title = "librambutan Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = 'Index'
@@ -156,7 +141,7 @@ html_short_title = 'Index'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = '_static/img/round_logo_32x32.ico'
+#html_favicon = '_static/img/round_logo_32x32.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
