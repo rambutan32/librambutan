@@ -22,7 +22,7 @@ import os.path
 # We rely on Michael Jones's breathe as a Doxygen-to-Sphinx bridge.
 # See the README for information on obtaining it and letting Sphinx
 # know where it is.
-sys.path.append(os.environ['BREATHE_HOME'])
+sys.path.insert(0, os.environ['BREATHE_HOME'])
 
 # -- General configuration ----------------------------------------------------
 
