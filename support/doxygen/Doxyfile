@@ -1385,6 +1385,7 @@ PREDEFINED             = __attribute__()= \
                        PCLK1=0 STM32_PCLK1=0 \
                        PCLK2=0 STM32_PCLK2=0 \
                        STM32_HAVE_TIMER(x)=1 \
+                       STM32_HAVE_DAC=1 \
                        __DOXYGEN__
 
 # If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then 
