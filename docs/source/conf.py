@@ -125,6 +125,7 @@ html_theme_options = {
         'showrelbartop': False,
         'showrelbarbottom': True,
         'cssfiles': ['_static/rambutan-docs.css',
+                     '_static/rambutan-fonts.css',
                      '_static/pygments-solarized-dark.css'],
 }
 
