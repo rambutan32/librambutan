@@ -51,7 +51,7 @@ master_doc = 'contents'
 
 # General information about the project.
 project = u'librambutan'
-copyright = u'2010, 2011, LeafLabs, LLC. 2014 Various Contributors.'
+copyright = u'2010, 2011, LeafLabs, LLC. 2014 Various Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -132,10 +132,9 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 #html_title = project + ' v' + release
-html_title = "librambutan Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'Index'
+html_short_title = 'librambutan'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -144,7 +143,7 @@ html_short_title = 'Index'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = '_static/img/round_logo_32x32.ico'
+html_favicon = '_static/img/logo_32x32.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -161,7 +160,7 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['globaltoc.html', 'searchbox.html'],
+   '**': ['globaltoc.html', 'sidebarresources.html', 'searchbox.html'],
 }
 
 # Additional templates that should be rendered to pages, maps page names to

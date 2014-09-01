@@ -1,0 +1,18 @@
+{% extends "!layout.html" %}
+
+{# TODO: this block is broken under Sphinx better theme? #}
+{% block rootrellink %}
+    <li><a href="http://rambutan.cc/">
+            <img width="16px" src="_static/img/logo_32x32.png"></img>
+            rambutan.cc
+        </a>&middot;</li>
+    <li><a href="http://docs.rambutan.cc">Project Docs</a>{{ reldelim1 }}</li>
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+    <header id="pageheader"><h1>
+    <a href="http://docs.rambutan.cc">Rambutan Documentation:</a>
+    <a href="{{ pathto(master_doc) }} ">{{ shorttitle }} {{ release}}</a>
+    </h1></header>
+{% endblock %}

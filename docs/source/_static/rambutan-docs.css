@@ -3,6 +3,7 @@
 
 /* TODO: http://practicaltypography.com/rules-and-borders.html */
 
+/* General page styling */
 body {
     font-family: "Crimson Text", serif;
     font-size: 16px;
@@ -12,21 +13,6 @@ body {
     font-size: 140%;
     line-height: 125%;
     color: rgb(72, 72, 72);
-}
-
-.sphinxsidebar {
-    padding-top: 10em;
-    opacity: 0.65;
-    font-size: 0.9rem;
-}
-
-.sphinxsidebar:hover {
-    opacity: 0.9;
-}
-
-.sphinxsidebar .search input {
-    padding-left: 0.25rem;
-    margin-bottom: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,13 +27,23 @@ h4 { font-size: 0.9em; font-weight: normal; }
 h5 { font-size: 0.9em; font-weight: normal; }
 
 header h1 {
+    opacity: 0.65;
     margin-top: 0.3em;
     font-size: 1.2em;
-    opacity: 0.65;
+    margin-left: 240px;
+    font-family: "Open Sans", "Helvetica", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: normal;
 }
 
 header h1:hover {
     opacity: 0.9;
+}
+
+header h1 a, header h1 a:visited {
+    color: #000;
 }
 
 .rubric {
@@ -70,21 +66,6 @@ footer#pagefooter, footer#pagefooter a {
 .contents .topic-title {
     font-weight: normal;
 }
-
-body > header h1 a, body > header h1 a:visited {
-    color: #000;
-    margin-left: 240px;
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-variant: small-caps;
-    font-weight: normal;
-}
-
-.sphinxsidebar h3 a {
-    color: #222;
-}
-
 pre, tt {
     font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
 }
@@ -102,6 +83,25 @@ a tt {
     font-weight: normal;
 }
 
+.sphinxsidebar {
+    padding-top: 10em;
+    opacity: 0.65;
+    font-size: 0.9rem;
+}
+
+.sphinxsidebar:hover {
+    opacity: 0.9;
+}
+
+.sphinxsidebar .search input {
+    padding-left: 0.25rem;
+    margin-bottom: 2em;
+}
+
+.sphinxsidebar h3 a {
+    color: #222;
+}
+
 .highlight pre {
     color: #ccc;
     background-color: #333;
@@ -114,6 +114,27 @@ a tt {
     line-height: 120%;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+tt.descname {
+    font-size: 0.8em;
+}
+
+dl.function > dt, dl.class > dt, dl.method > dt, dl.attribute > dt, dl.data > dt, dl.classmethod > dt, dl.enum > dt {
+    margin-bottom: 0.5em;
+    background: #f4f4f4;
+}
+
+dl li > p {
+    display: inline;
+}
+
+.related.bottom {
+    margin-top: 2em;
+}
+
 div.admondition, div.topic, div.warning, div.note {
     border-left: none;
     border-right: none;
@@ -121,12 +142,4 @@ div.admondition, div.topic, div.warning, div.note {
 
 div.note, div.topic {
     background-color: #f4f4f4;
-}
-
-.related.bottom {
-    margin-top: 2em;
-}
-
-a:hover {
-    text-decoration: none;
 }
