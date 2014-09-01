@@ -3,7 +3,30 @@
 
 /* TODO: http://practicaltypography.com/rules-and-borders.html */
 
-/* General page styling */
+/* Fonts first */
+@font-face {
+  font-family: 'SourceCodePro-Regular';
+  src: url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.otf')  format('opentype'),
+         url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.woff') format('woff'), url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.ttf')  format('truetype'), url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-Roman';
+  src: url('//rambutan.cc/theme/crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/crimson/CrimsonText-Roman.woff') format('woff'), url('//rambutan.cc/theme/crimson/CrimsonText-Roman.ttf')  format('truetype'), url('//rambutan.cc/theme/crimson/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('//rambutan.cc/theme/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/OpenSans.woff') format('woff'), url('//rambutan.cc/theme/open-sans/OpenSans.ttf')  format('truetype'), url('//rambutan.cc/theme/open-sans/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* End of fonts */
+
 body {
     font-family: "Crimson Text", serif;
     font-size: 16px;
@@ -66,6 +89,21 @@ footer#pagefooter, footer#pagefooter a {
 .contents .topic-title {
     font-weight: normal;
 }
+
+body > header h1 a, body > header h1 a:visited {
+    color: #000;
+    margin-left: 240px;
+    font-family: "Open Sans", "Helvetica", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: normal;
+}
+
+.sphinxsidebar h3 a {
+    color: #222;
+}
+
 pre, tt {
     font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
 }
