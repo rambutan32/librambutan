@@ -101,7 +101,7 @@ add_function_parentheses = True
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -124,8 +124,7 @@ html_theme = '_better_theme'
 html_theme_options = {
         'showrelbartop': False,
         'showrelbarbottom': True,
-        'cssfiles': ['_static/rambutan-docs.css',
-                     '_static/pygments-solarized-dark.css'],
+        'cssfiles': ['_static/rambutan-docs.css', ]
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
