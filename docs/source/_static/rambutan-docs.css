@@ -5,23 +5,35 @@
 
 /* Fonts first */
 @font-face {
-  font-family: 'SourceCodePro-Regular';
-  src: url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.otf')  format('opentype'),
-         url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.woff') format('woff'), url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.ttf')  format('truetype'), url('//rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+  font-family: 'Source Code Pro';
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.otf')  format('opentype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.ttf')  format('truetype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CrimsonText-Roman';
-  src: url('//rambutan.cc/theme/crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/crimson/CrimsonText-Roman.woff') format('woff'), url('//rambutan.cc/theme/crimson/CrimsonText-Roman.ttf')  format('truetype'), url('//rambutan.cc/theme/crimson/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg');
+  font-family: 'Crimson Text';
+  src: local('Crimson Text'), local('CrimsonText-Roman'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.woff') format('woff'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.ttf')  format('truetype'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('//rambutan.cc/theme/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'),  url('//rambutan.cc/theme/OpenSans.woff') format('woff'), url('//rambutan.cc/theme/open-sans/OpenSans.ttf')  format('truetype'), url('//rambutan.cc/theme/open-sans/OpenSans.svg#OpenSans') format('svg');
+  font-family: 'Open Sans';
+  src: local('Open Sans'), local('OpenSans'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.woff') format('woff'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.ttf')  format('truetype'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.svg#OpenSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
