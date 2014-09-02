@@ -89,21 +89,6 @@ footer#pagefooter, footer#pagefooter a {
 .contents .topic-title {
     font-weight: normal;
 }
-
-body > header h1 a, body > header h1 a:visited {
-    color: #000;
-    margin-left: 240px;
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-variant: small-caps;
-    font-weight: normal;
-}
-
-.sphinxsidebar h3 a {
-    color: #222;
-}
-
 pre, tt {
     font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
 }
