@@ -10,7 +10,9 @@ before_script:
 script:
     - make
 env:
-  matrix:
     - BOARD=maple_mini
     - BOARD=maple_native
     - BOARD=st_stm3220g_eval
+matrix:
+    allow_failures:
+        - env: BOARD=st_stm3220g_eval
