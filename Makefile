@@ -20,7 +20,7 @@ LIBRARIES_PATH := $(SRCROOT)/libraries
 LDDIR := $(SUPPORT_PATH)/ld
 # Support files for this Makefile
 MAKEDIR := $(SUPPORT_PATH)/make
-BOARD_INCLUDE_DIR := $(MAKEDIR)/board-includes
+BOARD_INCLUDE_DIR ?= $(MAKEDIR)/board-includes
 
 ##
 ## Target-specific configuration.  This determines some compiler and

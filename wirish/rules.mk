@@ -8,12 +8,21 @@ BUILDDIRS       += $(BUILD_PATH)/$(d)
 # BUILDDIRS. These are in subdirectories, but they're logically part
 # of the Wirish submodule. That's a bit inconsistent with libmaple
 # proper, and should be fixed.
+# Optionally support out-of-tree board files if WIRISH_BOARD_PATH was exported
+ifeq ($(WIRISH_BOARD_PATH),)
 WIRISH_BOARD_PATH := boards/$(BOARD)
+WIRISH_BOARD_INCLUDE := $(d)/$(WIRISH_BOARD_PATH)/include
+WIRISH_BOARD_CPP_FILE := $(d)/$(WIRISH_BOARD_PATH)/board.cpp
 BUILDDIRS += $(BUILD_PATH)/$(d)/$(WIRISH_BOARD_PATH)
+else
+WIRISH_BOARD_INCLUDE := $(WIRISH_BOARD_PATH)/include
+WIRISH_BOARD_CPP_FILE := $(WIRISH_BOARD_PATH)/board.cpp
+BUILDDIRS += $(BUILD_PATH)/$(WIRISH_BOARD_PATH)
+endif
 BUILDDIRS += $(BUILD_PATH)/$(d)/$(TARGET_SERIES_MODULE)
 
 # Safe includes for Wirish.
-WIRISH_INCLUDES := -I$(d)/include -I$(d)/$(WIRISH_BOARD_PATH)/include
+WIRISH_INCLUDES := -I$(d)/include -I$(WIRISH_BOARD_INCLUDE)
 
 # Local flags. Add -I$(d) to allow for private includes.
 CFLAGS_$(d) := $(LIBMAPLE_INCLUDES) $(WIRISH_INCLUDES) -I$(d)
@@ -42,11 +51,14 @@ cppSRCS_$(d) +=	wirish_time.cpp
 cppSRCS_$(d) += $(TARGET_SERIES_MODULE)/boards_setup.cpp
 cppSRCS_$(d) += $(TARGET_SERIES_MODULE)/wirish_digital.cpp
 cppSRCS_$(d) += $(TARGET_SERIES_MODULE)/wirish_debug.cpp
-cppSRCS_$(d) += $(WIRISH_BOARD_PATH)/board.cpp
 
 sFILES_$(d)   := $(sSRCS_$(d):%=$(d)/%)
 cFILES_$(d)   := $(cSRCS_$(d):%=$(d)/%)
 cppFILES_$(d) := $(cppSRCS_$(d):%=$(d)/%)
+
+# board.cpp is a special case, because it may be out of tree
+cppSRCS_$(d) += $(WIRISH_BOARD_PATH)/board.cpp
+cppFILES_$(d) += $(WIRISH_BOARD_CPP_FILE)
 
 OBJS_$(d)     := $(sFILES_$(d):%.S=$(BUILD_PATH)/%.o) \
                  $(cFILES_$(d):%.c=$(BUILD_PATH)/%.o) \
