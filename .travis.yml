@@ -6,7 +6,7 @@ before_install:
 install:
     - sudo apt-get install gcc-arm-none-eabi
 before_script:
-    - cp examples/test-session.cpp main.cpp
+    - cp tests/test-session.cpp main.cpp
 script:
     - make
 env:
