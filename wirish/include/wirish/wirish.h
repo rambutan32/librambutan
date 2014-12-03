@@ -58,8 +58,13 @@
 
 /* Wiring macros and bit defines */
 
-#define true 0x1
-#define false 0x0
+// These may have been defined if stdbool.h was included
+#ifndef true
+#   define true 0x1
+#endif
+#ifndef false
+#   define false 0x0
+#endif
 
 #define LSBFIRST 0
 #define MSBFIRST 1
