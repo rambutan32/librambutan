@@ -18,4 +18,3 @@ env:
 matrix:
     allow_failures:
         - env: BOARD=st_stm3220g_eval
-        - env: BOARD=maple_native
