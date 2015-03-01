@@ -24,11 +24,6 @@
  * SOFTWARE.
  *****************************************************************************/
 
-/**
- * @file   maple.cpp
- * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief  Maple PIN_MAP and boardInit().
- */
 /*
  *  CM904.cpp ported from CM900.cpp
  *
