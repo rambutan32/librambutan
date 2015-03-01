@@ -1,6 +1,5 @@
-XXX
-XXX This file may be out of date!
-XXX
+
+WARNING: This file may be out of date!
 
 [NOTE: this is a long term proposal. The current implementation just does a 
 2ms TIMEOUT]

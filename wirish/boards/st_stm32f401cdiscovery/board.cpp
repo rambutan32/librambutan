@@ -69,7 +69,7 @@ void boardInit(void) {
 // - ADC device, or NULL if none
 // - ADC channel, or ADCx if none
 //
-// XXX: This table is definately not complete for the STM32F401C!!
+// TODO: This table is definately not complete for the STM32F401C!!
 extern const stm32_pin_info PIN_MAP[BOARD_NR_GPIO_PINS] = {
     PMAP_ROW(GPIOA,   0, NULL,  0, NULL,    ADCx), /* D0/PA0  */
     PMAP_ROW(GPIOA,   1, NULL,  0, NULL,    ADCx), /* D1/PA1  */
