@@ -25,9 +25,9 @@
  *****************************************************************************/
 
 /**
- * @file   wirish/boards/VLDiscovery/include/board/board.h
+ * @file   wirish/boards/st_stm32vldiscovery/include/board/board.h
  * @author Anton Eltchaninov <anton.eltchaninov@gmail.com>
- * @brief  VLDiscovery board header.
+ * @brief  st_stm32vldiscovery board header.
  */
 
 #ifndef _BOARD_VLDISCOVERY_H_

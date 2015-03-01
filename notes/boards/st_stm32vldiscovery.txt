@@ -1,0 +1,10 @@
+
+STM32VLDISCOVERY: STM32 value line Discovery
+
+User Manual:
+http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/CD00267113.pdf
+
+STM32F100RBT6B microcontroller, 128 KB Flash, 8 KB RAM in 64-pin LQFP
+ST-LINK
+
+Two buttons (reset and user), two LEDs, that's it.
