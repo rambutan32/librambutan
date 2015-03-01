@@ -55,14 +55,15 @@
 #define BOARD_NR_SPI            2
 
 /* SPI pin numbers. */
-#define BOARD_SPI1_NSS_PIN      10
-#define BOARD_SPI1_MOSI_PIN     11
-#define BOARD_SPI1_MISO_PIN     12
-#define BOARD_SPI1_SCK_PIN      13
-#define BOARD_SPI2_NSS_PIN      31
-#define BOARD_SPI2_MOSI_PIN     34
-#define BOARD_SPI2_MISO_PIN     33
-#define BOARD_SPI2_SCK_PIN      32
+#define BOARD_SPI1_NSS_PIN      4 // PA4
+#define BOARD_SPI1_MOSI_PIN     7 // PA7
+#define BOARD_SPI1_MISO_PIN     6 // PA6
+#define BOARD_SPI1_SCK_PIN      5 // PA5
+
+#define BOARD_SPI2_NSS_PIN      28
+#define BOARD_SPI2_MOSI_PIN     31
+#define BOARD_SPI2_MISO_PIN     30
+#define BOARD_SPI2_SCK_PIN      29
 
 /* Total number of GPIO pins that are broken out to headers and
  * intended for use. This includes pins like the LED, button, and
