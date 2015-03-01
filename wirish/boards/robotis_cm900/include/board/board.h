@@ -27,7 +27,7 @@
 
 
 /*
- * CM900.h
+ * robotis_cm900.h
  *
  *  Created on: 2012. 10. 14.
  *      Author: ROBOTIS[sm6787@robotis.com]

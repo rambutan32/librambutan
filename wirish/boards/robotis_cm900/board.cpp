@@ -1,5 +1,5 @@
 /*
- * cm900.cpp
+ * robotis_cm900.cpp
  *
  *  Created on: 2012. 10. 14.
  *      Author: in2storm
@@ -30,12 +30,6 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *****************************************************************************/
-
-/**
- * @file   maple.cpp
- * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief  Maple PIN_MAP and boardInit().
- */
 
 #include <board/board.h>         // For this board's header file
 
