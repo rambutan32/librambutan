@@ -695,7 +695,7 @@ port.
   could be ``/dev/ttyUSB1``, ``/dev/ttyUSB2``, etc.).
 
 * On **OS X**, ``ser-port`` will probably look like
-  ``/dev/tty.usbserialXXXX``, where ``XXXX`` is some random string of
+  ``/dev/tty.usbserialXYZ``, where ``XYZ`` is some random string of
   characters.
 
 * On **Windows**, ``ser-port`` will be something like ``COM1``, ``COM2``, etc.

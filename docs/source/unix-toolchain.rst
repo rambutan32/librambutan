@@ -223,7 +223,7 @@ Try using one of these to find out which it is::
 
 To open up a session on Linux or OS X, run ::
 
-  $ screen /dev/ttyXXX
+  $ screen /dev/ttyXYZ
 
 (On Windows, you will need to use a separate program, such as `PuTTY
 <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_.)
