@@ -1,0 +1,10 @@
+
+STM32F4DISCOVERY
+
+User Manual: UM1472
+http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/DM00039084.pdf
+
+Lots of peripherals on this one!
+
+STM32F407VGT6
+ST-LINK
