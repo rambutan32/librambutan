@@ -25,9 +25,9 @@
  *****************************************************************************/
 
 /**
- * @file   wirish/boards/nucleo/board.cpp
+ * @file   wirish/boards/st_nucleo_f103rb/board.cpp
  * @author Grégoire Passault <g.passault@gmail.com>
- * @brief  Nucleo board file
+ * @brief  st_nucleo_f103rb board file
  *
  * This mapping was done using the NUCLEO documentation and may be incomplete
  * or contains error
