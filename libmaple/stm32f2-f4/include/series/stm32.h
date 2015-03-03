@@ -45,6 +45,17 @@ extern "C" {
 #   define STM32_NR_GPIO_PORTS          9
 #   define STM32_TIMER_MASK             0x7FFE /* TIMER1-TIMER14. */
 #   define STM32_SRAM_END               ((void*)0x20020000)
+#elif defined(MCU_STM32F401VC)
+#   define STM32_MCU_SERIES             STM32_SERIES_F4
+#   define STM32_NR_GPIO_PORTS          5
+#   define STM32_TIMER_MASK             0x3E
+/* TODO: This value for STM32_SRAM_END is very generous */
+#   define STM32_SRAM_END               ((void*)0x20020000)
+#elif defined(MCU_STM32F401CC)
+#   define STM32_MCU_SERIES             STM32_SERIES_F4
+#   define STM32_NR_GPIO_PORTS          3
+#   define STM32_TIMER_MASK             0x3E
+#   define STM32_SRAM_END               ((void*)0x20010000)
 #else
 #warning "Unsupported or unspecified STM32F2 MCU."
 #endif
@@ -71,7 +82,22 @@ extern "C" {
 #    define STM32_DELAY_US_MULT             20 /* FIXME: dummy value. */
 #    endif
 #elif STM32_MCU_SERIES == STM32_SERIES_F4
-#    error "STM32F4 support is unimplemented"
+#    define STM32_NR_INTERRUPTS             84
+#    define STM32_HAVE_FSMC                 0
+#    define STM32_HAVE_USB                  0
+#    define STM32_HAVE_DAC                  0
+
+#ifndef STM32_PCLK1
+#define STM32_PCLK1                         42000000U
+#endif
+
+#ifndef STM32_PCLK2
+#define STM32_PCLK2                         84000000U
+#endif
+
+#ifndef STM32_DELAY_US_MULT
+#define STM32_DELAY_US_MULT                 28 /* CYCLES_PER_MICROSECOND/3 */
+#endif
 #else
 #    error "Invalid STM32 series for this header"
 #endif

@@ -186,7 +186,11 @@ typedef struct flash_reg_map {
  */
 
 /* Note that this value depends on a 2.7V--3.6V supply voltage */
+#if STM32_MCU_SERIES == STM32_SERIES_F4
+#define FLASH_SAFE_WAIT_STATES          FLASH_WAIT_STATE_2
+#else
 #define FLASH_SAFE_WAIT_STATES          FLASH_WAIT_STATE_3
+#endif
 
 /* Flash memory features available via ACR. */
 enum {

@@ -128,7 +128,11 @@ typedef struct rcc_reg_map {
 #define RCC_PLLCFGR_PLLSRC_HSE          (0x1 << RCC_PLLCFGR_PLLSRC_BIT)
 #define RCC_PLLCFGR_PLLP                (0x3 << 16)
 #define RCC_PLLCFGR_PLLN                (0x1FF << 6)
-#define RCC_PLLCFGR_PLLM                0x1F
+#if STM32_MCU_SERIES == STM32_SERIES_F4
+#   define RCC_PLLCFGR_PLLM                0x3F
+#else
+#   define RCC_PLLCFGR_PLLM                0x1F
+#endif
 
 /* Clock configuration register */
 
