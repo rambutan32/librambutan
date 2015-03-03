@@ -36,11 +36,29 @@
 /* 84 MHz -> 84 cycles per microsecond. */
 #define CYCLES_PER_MICROSECOND  84
 
-/* Pin number for the built-in button. */
-#define BOARD_BUTTON_PIN        0
+// PLL config for 8 MHz external crystal
+// --> 84 MHz SYSCLK, with 48 MHz PLL48CK.
+//
+// Additional constraints:
+//    ASSERT_FAULT((data->pllq >= 4) && (data->pllq <= 15));
+//    ASSERT_FAULT((data->pllp >= 2) && (data->pllp <= 8));
+//    ASSERT_FAULT(!(data->pllp & 1));
+//    ASSERT_FAULT((data->plln >= 192) && (data->plln <= 432));
+//    ASSERT_FAULT((data->pllm >= 2) && (data->pllm <= 63));
+//
+// f_VCO = (INPUT) X (PLL_N / PLL_M)
+#define BOARD_PLL_N 336
+#define BOARD_PLL_M 8
+// SYSCLK = f_PLL = f_VCO / PLL_P;   PLL_P = {2, 4, 6, 8}
+#define BOARD_PLL_P 4
+// PLL48CK = f_USBETC = f_VCO / PLL_Q;   2 <= PLL_Q <= 15
+#define BOARD_PLL_Q 7   // should be 2?
 
-/* Pin number for the built-in LED. */
-#define BOARD_LED_PIN           63
+/* Pin number for the built-in button (USER button on STM32F401DISCOVERY) */
+#define BOARD_BUTTON_PIN        PA0
+
+/* Pin number for the built-in LED (blue LED on STM32F401DISCOVERY) */
+#define BOARD_LED_PIN           PD15
 
 /* Number of USARTs/UARTs whose pins are broken out to headers. */
 #define BOARD_NR_USARTS         3
@@ -50,6 +68,10 @@
 #define BOARD_USART1_RX_PIN     10
 #define BOARD_USART2_TX_PIN     2
 #define BOARD_USART2_RX_PIN     3
+/* FIXME:
+#define BOARD_USART3_TX_PIN     -1
+#define BOARD_USART3_RX_PIN     -1
+*/
 
 /* Number of SPI ports broken out to headers. */
 #define BOARD_NR_SPI            2
