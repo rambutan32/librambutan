@@ -64,23 +64,21 @@
 #define BOARD_NR_USARTS         3
 
 /* USART pin numbers. */
-#define BOARD_USART1_TX_PIN     9
-#define BOARD_USART1_RX_PIN     10
-#define BOARD_USART2_TX_PIN     2
-#define BOARD_USART2_RX_PIN     3
-/* FIXME:
-#define BOARD_USART3_TX_PIN     -1
-#define BOARD_USART3_RX_PIN     -1
-*/
+#define BOARD_USART1_TX_PIN     PA9
+#define BOARD_USART1_RX_PIN     PA10
+#define BOARD_USART2_TX_PIN     PA2
+#define BOARD_USART2_RX_PIN     PA3
+#define BOARD_USART3_TX_PIN     PB10
+#define BOARD_USART3_RX_PIN     PB11
 
 /* Number of SPI ports broken out to headers. */
 #define BOARD_NR_SPI            2
 
 /* SPI pin numbers. */
-#define BOARD_SPI1_NSS_PIN      4 // PA4
-#define BOARD_SPI1_MOSI_PIN     7 // PA7
-#define BOARD_SPI1_MISO_PIN     6 // PA6
-#define BOARD_SPI1_SCK_PIN      5 // PA5
+#define BOARD_SPI1_NSS_PIN      PA4
+#define BOARD_SPI1_MOSI_PIN     PA7
+#define BOARD_SPI1_MISO_PIN     PA6
+#define BOARD_SPI1_SCK_PIN      PA5
 
 #define BOARD_SPI2_NSS_PIN      28
 #define BOARD_SPI2_MOSI_PIN     31
