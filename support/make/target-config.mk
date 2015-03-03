@@ -46,16 +46,18 @@ TARGET_FLAGS += -mcpu=cortex-m3 -march=armv7-m
 LD_SERIES_PATH := $(LD_SERIES_PATH)/$(MCU_F1_LINE)
 endif
 ifeq ($(MCU_SERIES), stm32f2)
+LD_SERIES_PATH := $(LD_SERIES_PATH)/stm32f2
 TARGET_FLAGS += -mcpu=cortex-m3 -march=armv7-m
 endif
 ifeq ($(MCU_SERIES), stm32f4)
 TARGET_FLAGS += -mcpu=cortex-m4 -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16
+LD_SERIES_PATH := $(LD_SERIES_PATH)/$(MCU_F4_LINE)
 endif
 
 TARGET_LDFLAGS += -Xlinker -T$(LD_SCRIPT_PATH) \
                   -L $(LD_SERIES_PATH) \
                   -L $(LD_MEM_PATH) \
-                  -L $(LDDIR)
+                  -L $(LDDIR) $(TARGET_FLAGS) -mthumb
 TARGET_FLAGS += -mthumb -DBOARD_$(BOARD) -DMCU_$(MCU) \
                 -DERROR_LED_PORT=$(ERROR_LED_PORT) \
                 -DERROR_LED_PIN=$(ERROR_LED_PIN) \
