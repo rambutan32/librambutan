@@ -50,8 +50,9 @@ LD_SERIES_PATH := $(LD_SERIES_PATH)/stm32f2
 TARGET_FLAGS += -mcpu=cortex-m3 -march=armv7-m
 endif
 ifeq ($(MCU_SERIES), stm32f4)
-TARGET_FLAGS += -mcpu=cortex-m4 -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16
 LD_SERIES_PATH := $(LD_SERIES_PATH)/$(MCU_F4_LINE)
+TARGET_FLAGS += -mcpu=cortex-m4 -march=armv7e-m -mfloat-abi=hard \
+	-mfpu=fpv4-sp-d16 -fsingle-precision-constant -Wdouble-promotion
 endif
 
 TARGET_LDFLAGS += -Xlinker -T$(LD_SCRIPT_PATH) \
