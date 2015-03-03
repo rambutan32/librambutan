@@ -15,6 +15,7 @@ env:
     - BOARD=olimex_stm32_h103
     - BOARD=maple_native
     - BOARD=st_stm3220g_eval
+    - BOARD=st_stm32f401cdiscovery
 matrix:
     allow_failures:
         - env: BOARD=st_stm3220g_eval
