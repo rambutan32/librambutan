@@ -42,19 +42,43 @@
 #include <wirish/wirish_types.h>
 #include <board/board.h>
 
-// PLL config for 25 MHz external crystal --> 120 MHz SYSCLK, with
-// 48 MHz PLL48CK.
-#ifndef BOARD_PLL_Q
-#define BOARD_PLL_Q 5
-#endif
-#ifndef BOARD_PLL_P
-#define BOARD_PLL_P 2
-#endif
-#ifndef BOARD_PLL_N
-#define BOARD_PLL_N 240
-#endif
-#ifndef BOARD_PLL_M
-#define BOARD_PLL_M 25
+// Not used by STM32F2
+#define FPU_CPACR 0xE000ED88
+
+/* See libmaple/stm32f2-f4/rcc.c for constraints on these values, or the vendor
+ * user manual */
+#if STM32_MCU_SERIES == STM32_SERIES_F2
+    // PLL config for 25 MHz external crystal --> 120 MHz SYSCLK, with
+    // 48 MHz PLL48CK.
+#   ifndef BOARD_PLL_Q
+#   define BOARD_PLL_Q 5
+#   endif
+#   ifndef BOARD_PLL_P
+#   define BOARD_PLL_P 2
+#   endif
+#   ifndef BOARD_PLL_N
+#   define BOARD_PLL_N 240
+#   endif
+#   ifndef BOARD_PLL_M
+#   define BOARD_PLL_M 25
+#   endif
+#elif STM32_MCU_SERIES == STM32_SERIES_F4
+    // PLL config for 8 MHz external crystal --> 84 MHz SYSCLK, with
+    // 48 MHz PLL48CK.
+#   ifndef BOARD_PLL_Q
+#   define BOARD_PLL_Q 7
+#   endif
+#   ifndef BOARD_PLL_P
+#   define BOARD_PLL_P 4
+#   endif
+#   ifndef BOARD_PLL_N
+#   define BOARD_PLL_N 336
+#   endif
+#   ifndef BOARD_PLL_M
+#   define BOARD_PLL_M 8
+#   endif
+#else
+#   error "Unsupported STM32_MCU_SERIES"
 #endif
 
 static stm32f2_rcc_pll_data pll_data = {BOARD_PLL_Q,
@@ -89,6 +113,7 @@ namespace wirish {
         }
 
         __weak void board_setup_clock_prescalers(void) {
+#if STM32_MCU_SERIES == STM32_SERIES_F2
             // On F2, with f_SYSCLK = 120 MHz (as determined by
             // board_pll_cfg),
             //
@@ -98,6 +123,19 @@ namespace wirish {
             rcc_set_prescaler(RCC_PRESCALER_AHB, RCC_AHB_SYSCLK_DIV_1);
             rcc_set_prescaler(RCC_PRESCALER_APB1, RCC_APB1_HCLK_DIV_4);
             rcc_set_prescaler(RCC_PRESCALER_APB2, RCC_APB2_HCLK_DIV_2);
+#elif STM32_MCU_SERIES == STM32_SERIES_F4
+            // On F2, with f_SYSCLK = 84 MHz (as determined by
+            // board_pll_cfg),
+            //
+            // f_AHB  = f_SYSCLK / 1 = 84 MHz
+            // f_APB1 = f_AHB / 2    = 42 MHz
+            // f_APB2 = f_AHB / 1    = 84 MHz
+            rcc_set_prescaler(RCC_PRESCALER_AHB, RCC_AHB_SYSCLK_DIV_1);
+            rcc_set_prescaler(RCC_PRESCALER_APB1, RCC_APB1_HCLK_DIV_2);
+            rcc_set_prescaler(RCC_PRESCALER_APB2, RCC_APB2_HCLK_DIV_1);
+#else
+#   error "Unsupported STM32_MCU_SERIES"
+#endif
         }
 
         __weak void board_setup_gpio(void) {
@@ -114,6 +152,11 @@ namespace wirish {
             // Turn on the I/O compensation cell, since we drive the
             // GPIOs quickly by default.
             syscfg_enable_io_compensation();
+
+#if STM32_MCU_SERIES == STM32_SERIES_F4
+            /* enable fpu with full access */
+            *(volatile unsigned int*)FPU_CPACR |= 0xF << 20;
+#endif
         }
 
     }
