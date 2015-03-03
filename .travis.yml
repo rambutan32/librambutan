@@ -8,7 +8,7 @@ install:
 before_script:
     - cp tests/test-session.cpp main.cpp
 script:
-    - make
+    - make jtag
 env:
     - BOARD=maple
     - BOARD=maple_mini
