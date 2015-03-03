@@ -131,5 +131,8 @@ __stm32_vector_table:
         .long __irq_dcmi
         .long __irq_cryp
         .long __irq_hash_rng
+/* STM32F4-specific */
+        .long __irq_fpu
+        .long __irq_spi4
 
         .size __stm32_vector_table, . - __stm32_vector_table

@@ -320,3 +320,10 @@ __default_handler:
         .weak __irq_hash_rng
         .globl __irq_hash_rng
         .set __irq_hash_rng, __default_handler
+/* STM32F4 Specific */
+        .weak __irq_fpu
+        .globl __irq_fpu
+        .set __irq_fpu, __default_handler
+        .weak __irq_spi4
+        .globl __irq_spi4
+        .set __irq_spi4, __default_handler
