@@ -30,16 +30,50 @@
  */
 
 #include <libmaple/nvic.h>
+#include <libmaple/gpio.h>
+#include <libmaple/stm32.h>
+#include <libmaple/timer.h>
+#include <libmaple/adc.h>
+#include <libmaple/usart.h>
+
+/* Failed ASSERT()s send out a message using this USART config. */
+#ifndef ERROR_USART
+#define ERROR_USART            USART1
+#define ERROR_USART_BAUD       115200
+#define ERROR_TX_PORT          GPIOA
+#define ERROR_TX_PIN           9
+#endif
 
 /*
  * Disables all peripheral interrupts. Called by __error() with global
  * interrupts disabled.
  */
 void __lm_error(void) {
+    /* Turn off peripheral interrupts */
     nvic_irq_disable_all();
+
+    /* Turn off timers */
+    timer_disable_all();
+
+    /* Turn off ADC */
+    adc_disable_all();
+
+    /* Turn off all USARTs */
+    usart_disable_all();
+
+#if STM32_HAVE_USB
+    /* Turn the USB interrupt back on so the bootloader keeps on functioning */
+    nvic_irq_enable(NVIC_USB_HP_CAN_TX);
+    nvic_irq_enable(NVIC_USB_LP_CAN_RX0);
+#endif
 }
 
 /*
  * Enable the error USART for writing.
  */
-/* usart_dev* __lm_enable_error_usart(void) { (TODO) } */
+usart_dev* __lm_enable_error_usart() {
+    // FIXME: gpio_set_mode(ERROR_TX_PORT, ERROR_TX_PIN, GPIO_AF_OUTPUT_PP);
+    usart_init(ERROR_USART);
+    usart_set_baud_rate(ERROR_USART, USART_USE_PCLK, ERROR_USART_BAUD);
+    return ERROR_USART;
+}
