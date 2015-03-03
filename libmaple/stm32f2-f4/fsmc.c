@@ -30,6 +30,10 @@
  * @brief STM32F2 FSMC support.
  */
 
+#include <libmaple/stm32.h>
+
+#if STM32_HAVE_FSMC /* Don't try building the rest for MCUs without FSMC */
+
 #include <libmaple/fsmc.h>
 #include <libmaple/gpio.h>
 
@@ -88,3 +92,5 @@ void fsmc_sram_init_gpios(void) {
     CONFIG_GPIO(GPIOE,  0);
     CONFIG_GPIO(GPIOE,  1);
 }
+
+#endif  /* STM32_HAVE_FSMC */

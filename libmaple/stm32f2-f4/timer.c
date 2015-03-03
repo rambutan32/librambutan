@@ -31,6 +31,7 @@
  */
 
 #include <libmaple/timer.h>
+#include <libmaple/stm32.h>
 #include "timer_private.h"
 
 /*
@@ -85,17 +86,23 @@ gpio_af timer_get_af(timer_dev *dev) {
 
 void __irq_tim1_brk_tim9(void) {
     dispatch_adv_brk(TIMER1);
+#if STM32_HAVE_TIMER(9)
     dispatch_tim_9_12(TIMER9);
+#endif
 }
 
 void __irq_tim1_up_tim10(void) {
     dispatch_adv_up(TIMER1);
+#if STM32_HAVE_TIMER(10)
     dispatch_tim_10_11_13_14(TIMER10);
+#endif
 }
 
 void __irq_tim1_trg_com_tim11(void) {
     dispatch_adv_trg_com(TIMER1);
+#if STM32_HAVE_TIMER(11)
     dispatch_tim_10_11_13_14(TIMER11);
+#endif
 }
 
 void __irq_tim1_cc(void) {
@@ -125,24 +132,40 @@ void __irq_tim6(void) {
 }
 
 void __irq_tim7(void) {
+#if STM32_HAVE_TIMER(7)
     dispatch_basic(TIMER7);
+#endif
 }
 
 void __irq_tim8_brk_tim12(void) {
+#if STM32_HAVE_TIMER(8)
     dispatch_adv_brk(TIMER8);
+#endif
+#if STM32_HAVE_TIMER(12)
     dispatch_tim_9_12(TIMER12);
+#endif
 }
 
 void __irq_tim8_up_tim13(void) {
+#if STM32_HAVE_TIMER(8)
     dispatch_adv_up(TIMER8);
+#endif
+#if STM32_HAVE_TIMER(13)
     dispatch_tim_10_11_13_14(TIMER13);
+#endif
 }
 
 void __irq_tim8_trg_com_tim14(void) {
+#if STM32_HAVE_TIMER(8)
     dispatch_adv_trg_com(TIMER8);
+#endif
+#if STM32_HAVE_TIMER(14)
     dispatch_tim_10_11_13_14(TIMER14);
+#endif
 }
 
 void __irq_tim8_cc(void) {
+#if STM32_HAVE_TIMER(8)
     dispatch_adv_cc(TIMER8);
+#endif
 }
