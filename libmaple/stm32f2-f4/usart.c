@@ -42,7 +42,7 @@ static ring_buffer usart1_rb;
 static usart_dev usart1 = {
     .regs     = USART1_BASE,
     .rb       = &usart1_rb,
-    .max_baud = 4500000UL,      /* TODO: are these correct? */
+    .max_baud = 4500000UL,      /* TODO: are these correct? 5250000UL for STM32F4? */
     .clk_id   = RCC_USART1,
     .irq_num  = NVIC_USART1,
 };
@@ -53,7 +53,7 @@ static ring_buffer usart2_rb;
 static usart_dev usart2 = {
     .regs     = USART2_BASE,
     .rb       = &usart2_rb,
-    .max_baud = 2250000UL,      /* TODO: are these correct? */
+    .max_baud = 2250000UL,      /* TODO: are these correct? 2620000UL for STM32F4? */
     .clk_id   = RCC_USART2,
     .irq_num  = NVIC_USART2,
 };
@@ -97,7 +97,7 @@ static ring_buffer usart6_rb;
 static usart_dev usart6 = {
     .regs = USART6_BASE,
     .rb = &usart6_rb,
-    .max_baud = 4500000UL,      /* TODO: are these correct? */
+    .max_baud = 4500000UL,      /* TODO: are these correct? 5250000UL for STM32F4? */
     .clk_id = RCC_USART6,
     .irq_num = NVIC_USART6,
 };
