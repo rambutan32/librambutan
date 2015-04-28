@@ -124,3 +124,5 @@ Repository Layout
     Extra wrappers and functionality around the lower level code in
     /libmaple/. These files implement an Arduino "Wiring"-like
     library.
+
+Join the chat at https://gitter.im/rambutan32/librambutan
