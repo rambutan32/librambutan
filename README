@@ -1,23 +1,33 @@
 
-                   _ _ _                           _
-                  | (_) |__  _ __ ___   __ _ _ __ | | ___
-                  | | | '_ \| '_ ` _ \ / _` | '_ \| |/ _ \
-                  | | | |_) | | | | | | (_| | |_) | |  __/
-                  |_|_|_.__/|_| |_| |_|\__,_| .__/|_|\___|
-                                            |_|               by LeafLabs!
-                                                              leaflabs.com
+         _ _ _                         _           _              
+        | (_) |__  _ __ __ _ _ __ ___ | |__  _   _| |_ __ _ _ __  
+        | | | '_ \| '__/ _` | '_ ` _ \| '_ \| | | | __/ _` | '_ \ 
+        | | | |_) | | | (_| | | | | | | |_) | |_| | || (_| | | | |
+        |_|_|_.__/|_|  \__,_|_| |_| |_|_.__/ \__,_|\__\__,_|_| |_|
 
 
 The latest version of this repository can be found here:
 
-    https://github.com/leaflabs/libmaple
+    https://github.com/rambutan32/librambutan
 
 IMPORTANT: read HACKING _before_ submitting patches.
 
 General information
 ------------------------------------------------------------------------------
 
-libmaple is a library for programming ST's STM32 line of Cortex M3
+librambutan is a fork of Leaflab's libmaple firmware libraries. As of 2015
+Leaflabs is not actively maintaining libmaple and the original Maple series
+hardware is End Of Life. For the foreseeable future the name 'libmaple' will
+continue to be used in documentation and filenames for backwards compatability.
+You can get the latest information about the Rambutan project at:
+
+    https://forums.rambutan.cc
+
+The original libmaple can be found at:
+
+    https://github.com/leaflabs/libmaple
+
+librambutan is a library for programming ST's STM32 line of Cortex M3
 microcontrollers.  It has a pure C layer, libmaple proper, which does
 most of the work, and a C++ layer, Wirish, which provides high-level
 convenience functions and a Wiring/Arduino-compatible interface.
@@ -26,36 +36,28 @@ libmaple is designed for portability, and currently runs on a variety
 of STM32F1 performance and value line MCUs, with experimental support
 for STM32F2 MCUs.
 
-Using libmaple
+Using librambutan
 ------------------------------------------------------------------------------
 
-The easiest way to use libmaple is in concert with the Maple IDE.
-Maple IDE, a sister project from LeafLabs, is an Arduino IDE fork
-usable for programming Maple boards, which includes libmaple and a
-compilation and upload toolchain:
+A HOWTO on setting up this library for use from the command line in a Unix
+environment is available here:
 
-    http://leaflabs.com/docs/maple-ide-install.html
+    http://docs.rambutan.cc/projects/librambutan/en/master/unix-toolchain.html
 
-Additionally, a HOWTO on setting up this library for use from the
-command line in a Unix environment is available here:
-
-    http://leaflabs.com/docs/unix-toolchain.html
+At a minimum you will need the gcc-arm-none-eabi toolchain on your path,
+including the newlib libc and the libstdc++ libraries.
 
 Documentation, Etc.
 ------------------------------------------------------------------------------
 
-HTML documentation for the latest release of libmaple/Maple IDE is
-available here:
+Hosted HTML documentation for several versions of librambutan are available at:
 
-    http://leaflabs.com/docs/
+    http://docs.rambutan.cc/projects/librambutan/en/master/
 
-libmaple is well documented via Doxygen comments.  The HTML
-documentation referenced above (which also includes the Doxygen
-output) is automatically generated from the source files in the
-leaflabs-docs repository.  In order to obtain the leaflabs-docs
-repository, visit:
-
-    http://github.com/leaflabs/leaflabs-docs/
+libmaple is well documented via Doxygen comments.  The HTML documentation
+referenced above (which also includes the Doxygen output) is automatically
+generated from the source files in the docs directory. See the READMEs there
+for details.
 
 Repository Layout
 ------------------------------------------------------------------------------
@@ -66,8 +68,7 @@ Repository Layout
 
 /contrib/
 
-    Community-contributed resources.  LeafLabs doesn't maintain the
-    contents of this directory, so it may get stale.
+    Community-contributed resources.
 
 /examples/
 
@@ -86,7 +87,8 @@ Repository Layout
 
 /LICENSE
 
-    Licensing and copyright information.
+    Licensing and copyright information. librambutan is (mostly) under an MIT
+    license.
 
 /main.cpp.example
 
