@@ -1,6 +1,7 @@
 build/
 doxygen/xml/
 doxygen/html/
+doxygen/doxygen_sqlite3.db
 main.cpp
 libmaple.layout
 tags
@@ -10,3 +11,6 @@ TAGS
 arm
 cscope*
 .gdbinit
+
+# Don't ignore this file itself
+!.gitignore
