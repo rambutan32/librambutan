@@ -1,8 +1,7 @@
-This file explains how to build the HTML documentation. As such, it's
-probably only useful to LeafLabs developers. Users can read the HTML
-for the latest release here:
+This file explains how to build the HTML documentation. Users can quickly read
+the HTML for the latest release here:
 
-    http://leaflabs.com/docs/
+    http://docs.rambutan.cc/projects/librambutan/en/master/
 
 Install Dependencies
 --------------------
@@ -11,8 +10,7 @@ First, you will need to install some dependencies (Doxygen, Sphinx,
 and Breathe).
 
 1. Much of the documentation is pulled out of the libmaple source
-   code's Doxygen comments, so you need a recent-ish version of
-   Doxygen in your PATH:
+   code's Doxygen comments, so you need Doxygen in your PATH:
 
     http://www.stack.nl/~dimitri/doxygen/download.html#latestsrc
 
@@ -22,11 +20,19 @@ and Breathe).
 
    These are your choices for how to install Sphinx:
 
-   - From source or .egg:
-     http://pypi.python.org/pypi/Sphinx#downloads
+   - From a Linux package manager, eg:
+     $ sudo apt-get install python-sphinx
+
+   - From an OS X package manager, like MacPorts or homebrew.
+
+   - Via pip:
+     $ sudo pip install Sphinx
 
    - Via easy_install:
      $ sudo easy_install -U Sphinx
+
+   - From source or .egg:
+     http://pypi.python.org/pypi/Sphinx#downloads
 
    You need Sphinx version >= 1.0.6.
 
@@ -34,9 +40,12 @@ and Breathe).
    into a form usable by Sphinx. (More about Breathe:
    http://michaeljones.github.com/breathe/).
 
-   LeafLabs sometimes patches Breathe for the purposes of building our
+   The more recent versions of Breathe seem to have all the features necessary
+   to build these docs, so you can install the distribution version (breathe-doc).
+
+   Alternatively, LeafLabs sometimes patches Breathe for the purposes of building
    docs, so clone the LeafLabs Breathe tree from GitHub (somewhere
-   else on your system, NOT in the leaflabs-docs repo):
+   else on your system, NOT in the librambutan repo):
 
    - LeafLabs developers, clone with push permissions:
      $ git clone git@github.com:leaflabs/breathe.git
@@ -44,7 +53,7 @@ and Breathe).
    - Everyone else, clone without them:
      $ git clone git://github.com/leaflabs/breathe.git
 
-4. After that's done, set environment variable BREATHE_HOME to point to
+   After that's done, set environment variable BREATHE_HOME to point to
    Breathe.  Something like this in Bash:
 
    $ export BREATHE_HOME=/path/to/breathe/repo/
@@ -59,14 +68,14 @@ produce Doxygen XML output, then you can generate the final HTML docs.
 
 1. Before the first time you run Sphinx (and any time the Doxygen
    comments in the libmaple source code are changed), you'll need to
-   re-run doxygen on libmaple.
+   re-run doxygen on the top level of librambutan.
 
-    $ cd /path/to/top/level
+    $ cd /path/to/top/level/librambutan
     $ make doxygen
 
    Doxygen will yell at you a lot; it's generally safe to ignore it.
 
-2. Finally, you can build the HTML (in the leaflabs-docs repository):
+2. Finally, you can build the HTML:
 
     $ cd /path/to/docs
     $ make html
@@ -93,7 +102,7 @@ comments lives in source/.  The directory source/_static/ is for
 static content (like style sheets); source/_templates/ is meant to
 contain Sphinx templates.
 
-Read more about Sphinx and use the existing leaflabs-docs source for
+Read more about Sphinx and use the existing source for
 examples when writing new docs.  The directory tmpl/ contains template
 ReST files you should sometimes use when creating a page that follows
 a pattern (like a libmaple API page), in order to keep the style
