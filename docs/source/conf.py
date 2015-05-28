@@ -268,7 +268,7 @@ if os.path.isdir(doxygen_xml_maybe):
     doxygen_xml_dir = doxygen_xml_maybe
 else:
     print("FAIL: doxygen hasn't been run yet in this repository; "
-          "see ../README")
+          "see README-building.txt")
     sys.exit(-1)
 
 breathe_projects = {'libmaple' : doxygen_xml_dir}
