@@ -1,15 +1,12 @@
-        This is at least a partial credits-file of people that have
-        contributed to libmaple (it was originally drawn from the
-        commit logs, so it e.g. leaves out contributions that didn't
-        come in the form of patches).  It's formatted the same way as
-        the Linux kernel CREDITS: sorted by name and formatted for
-        easy processing.
+        This is at least a partial credits-file of people that have contributed
+        to libmaple and librambutan (it was originally drawn from the commit
+        logs, so it e.g. leaves out contributions that didn't come in the form
+        of patches).  It's formatted the same way as the Linux kernel CREDITS:
+        sorted by name and formatted for easy processing.
 
         The fields are: name (N), email (E), web-address (W),
         description (D). Feel free to add any other fields present in
         the Linux CREDITS file.
-
-            LeafLabs
 
 ----------
 

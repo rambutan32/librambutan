@@ -467,7 +467,7 @@ do a read-modify-write sequence on the DMA_CCR_PL bits like so::
 
 Of course, before doing that, you should check to make sure there's
 not already a device-level function for performing the same task!  (In
-this case, there is. It's called :c:func:`dma_set_priority()`; see
+this case, there is. It's called ``dma_set_priority()``; see
 :ref:`libmaple-dma`.) For instance, **none of the above code is
 portable** to STM32F4, which uses DMA streams instead of channels for
 this purpose.

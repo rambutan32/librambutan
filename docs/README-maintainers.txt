@@ -1,14 +1,10 @@
 This file contains information useful for the documentation's
-maintainers. As such, it's probably only useful to LeafLabs
-developers. Users can read the HTML for the latest release here:
+maintainers. Users can read the HTML for the latest release here:
 
-    http://leaflabs.com/docs/
+    http://docs.rambutan.cc/projects/librambutan/en/master/
 
-Things you can learn how to do from this file:
-
-- Cut a release version
-- Fix errors in/otherwise maintain the current docs release
-- Add docs for a new board
+This file is out of date (libmaple era). librambutan uses readthedocs.org to
+auto-build documentation.
 
 Building Documentation for a Release
 ------------------------------------
@@ -184,7 +180,7 @@ It needs to be updated RIGHT AWAY, you say?  Here's what you do:
 
 - Distribute the updated docs.  These are world-visible here:
 
-      http://static.leaflabs.com/pub/leaflabs/maple-docs/
+    http://docs.rambutan.cc/
 
 Adding a New Board
 ------------------

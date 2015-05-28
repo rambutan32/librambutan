@@ -42,14 +42,17 @@ Functions
 
 .. doxygenfunction:: gpio_init
 .. doxygenfunction:: gpio_init_all
-.. doxygenfunction:: gpio_set_mode
+.. doxygenfunction:: gpio_set_mode(gpio_dev *, uint8, gpio_pin_mode)
 .. doxygenfunction:: gpio_exti_port
 .. doxygenfunction:: gpio_write_bit
 .. doxygenfunction:: gpio_read_bit
 .. doxygenfunction:: gpio_toggle_bit
 
 .. doxygenfunction:: afio_init
-.. doxygenfunction:: afio_exti_select
+
+.. c:macro:: afio_exti_select(exti, port)
+
+   Macro for `exti_select((exti), (port))`.
 
 .. _gpio-h-afio-remap:
 .. doxygenfunction:: afio_remap

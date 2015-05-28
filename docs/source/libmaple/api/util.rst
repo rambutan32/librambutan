@@ -50,5 +50,5 @@ If an assertion fails, execution is halted at the point of the failed
 assertion.  When libmaple has been configured properly (Wirish
 performs this configuration by default), the built-in LED throbs in a
 smooth pattern to signal the failed assertion (using
-:c:func:`throb()`), and the file and line where the assert failed are
+``throb()``), and the file and line where the assert failed are
 transmitted to the user as detailed in :ref:`lang-assert`.

@@ -42,7 +42,8 @@ function (an example is given below).
 
 .. FIXME [Breathe] Output doesn't include the class; fix & submit pull req
 
-.. doxygenfunction:: HardwareSPI::begin
+.. doxygenfunction:: HardwareSPI::begin(void)
+.. doxygenfunction:: HardwareSPI::begin(SPIFrequency, uint32, uint32)
 
 .. note:: If you are using SPI port 3 (on a board that supports it;
    not all do); you'll need to call :ref:`lang-disabledebugports`

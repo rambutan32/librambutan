@@ -49,7 +49,7 @@ Functions
 .. doxygenfunction:: nvic_globalirq_disable
 .. doxygenfunction:: nvic_irq_enable
 .. doxygenfunction:: nvic_irq_disable
-.. doxygenfunction:: nvic_irq_disable_all
+.. doxygenfunction:: nvic_irq_disable_all(void)
 .. doxygenfunction:: nvic_sys_reset
 
 Register Maps

@@ -59,8 +59,8 @@ correspond to the pin you want to write to.  If you don't know what
 that means, don't worry.  We'll go through an example here.
 
 Let's say you want to write to pin 4 on the Maple.  In order to find
-out the port and bit number, take look at the Maple's :ref:`master pin
-map <maple-pin-map-master>` next to "D4".  You'll see that in the
+out the port and bit number, take look at the `Maple's master pin
+map`_ next to "D4".  You'll see that in the
 "GPIO" column, there's "PB5".  That's short for "**P**\ ort **B**, bit
 **5**".  So the GPIO port is "B", and the bit is "5".  (If you're not
 on the Maple, you can find your board's pin map :ref:`from here
