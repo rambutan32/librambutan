@@ -34,6 +34,10 @@ Devices
 Functions
 ---------
 
+.. NB: Some of these functions have multiple definitions, in which case the
+   complete function signature needs to be specified to disambiguate or breathe
+   will choke ("Unable to resolve multiple matches for function"...)
+
 .. doxygenfunction:: dma_init
 .. doxygenfunction:: dma_setup_transfer
 .. doxygenfunction:: dma_set_num_transfers
@@ -43,12 +47,12 @@ Functions
 .. doxygenfunction:: dma_get_irq_cause
 .. doxygenfunction:: dma_enable
 .. doxygenfunction:: dma_disable
-.. doxygenfunction:: dma_set_mem_addr
+.. doxygenfunction:: dma_set_mem_addr(dma_dev *, dma_tube, __io void *)
 .. doxygenfunction:: dma_set_per_addr
 .. doxygendefine:: dma_channel_regs
 .. doxygendefine:: dma_is_channel_enabled
-.. doxygenfunction:: dma_get_isr_bits
-.. doxygenfunction:: dma_clear_isr_bits
+.. doxygenfunction:: dma_get_isr_bits(dma_dev *, dma_tube)
+.. doxygenfunction:: dma_clear_isr_bits(dma_dev *, dma_tube)
 
 Register Map Base Pointers
 --------------------------

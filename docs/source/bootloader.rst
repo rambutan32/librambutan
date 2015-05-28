@@ -613,8 +613,8 @@ In order to follow these instructions, you will need:
 - A binary of the bootloader you want to upload (see below).
 - Hardware for communicating between the Maple and your computer over
   serial.
-- `Python <http://python.org>`_, version 2.5 or higher.
-- The `PySerial <http://pyserial.sourceforge.net/>`_ library (this
+- Python_, version 2.5 or higher.
+- The PySerial_ library (this
   must be installed separately; it is not part of the Python standard
   library).
 
