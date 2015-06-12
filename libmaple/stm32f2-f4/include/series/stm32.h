@@ -51,7 +51,7 @@ extern "C" {
 #   define STM32_TIMER_MASK             0x3E
 /* TODO: This value for STM32_SRAM_END is very generous */
 #   define STM32_SRAM_END               ((void*)0x20020000)
-#elif defined(MCU_STM32F401CC)
+#elif defined(MCU_STM32F401CC) || defined(MCU_STM32F401RB)
 #   define STM32_MCU_SERIES             STM32_SERIES_F4
 #   define STM32_NR_GPIO_PORTS          3
 #   define STM32_TIMER_MASK             0x3E
