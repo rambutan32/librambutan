@@ -44,15 +44,38 @@
 /**
  * @brief Defines the possible SPI communication speeds.
  */
+// FIXME: this double-definition, board-specific enum doesn't seem like best
+// practice for a header file.
 typedef enum SPIFrequency {
-    SPI_18MHZ       = 0, /**< 18 MHz */
-    SPI_9MHZ        = 1, /**< 9 MHz */
-    SPI_4_5MHZ      = 2, /**< 4.5 MHz */
-    SPI_2_25MHZ     = 3, /**< 2.25 MHz */
-    SPI_1_125MHZ    = 4, /**< 1.125 MHz */
-    SPI_562_500KHZ  = 5, /**< 562.500 KHz */
-    SPI_281_250KHZ  = 6, /**< 281.250 KHz */
-    SPI_140_625KHZ  = 7, /**< 140.625 KHz */
+    SPI_PCLK_DIV_2   = 0,
+    SPI_PCLK_DIV_4   = 1,
+    SPI_PCLK_DIV_8   = 2,
+    SPI_PCLK_DIV_16  = 3,
+    SPI_PCLK_DIV_32  = 4,
+    SPI_PCLK_DIV_64  = 5,
+    SPI_PCLK_DIV_128 = 6,
+    SPI_PCLK_DIV_256 = 7,
+#if CYCLES_PER_MICROSECOND == 72
+    SPI_18MHZ       = SPI_PCLK_DIV_2,   /**< 18 MHz */
+    SPI_9MHZ        = SPI_PCLK_DIV_4,   /**< 9 MHz */
+    SPI_4_5MHZ      = SPI_PCLK_DIV_8,   /**< 4.5 MHz */
+    SPI_2_25MHZ     = SPI_PCLK_DIV_16,  /**< 2.25 MHz */
+    SPI_1_125MHZ    = SPI_PCLK_DIV_32,  /**< 1.125 MHz */
+    SPI_562_500KHZ  = SPI_PCLK_DIV_64,  /**< 562.500 KHz */
+    SPI_281_250KHZ  = SPI_PCLK_DIV_128, /**< 281.250 KHz */
+    SPI_140_625KHZ  = SPI_PCLK_DIV_256, /**< 140.625 KHz */
+#elif CYCLES_PER_MICROSECOND == 84
+// FIXME: review these 84 MHz values
+    SPI_21MHZ       = SPI_PCLK_DIV_2,   /**< 21 MHz */
+    SPI_10_5MHZ     = SPI_PCLK_DIV_4,   /**< 10.5 MHz */
+    SPI_5_25MHZ     = SPI_PCLK_DIV_8,   /**< 5.25 MHz */
+    SPI_2_625MHZ    = SPI_PCLK_DIV_16,  /**< 2.625 MHz */
+    SPI_1_3125MHZ   = SPI_PCLK_DIV_32,  /**< 1.3125 MHz */
+    SPI_656_250KHZ  = SPI_PCLK_DIV_64,  /**< 656.25 KHz */
+    SPI_328_125KHZ  = SPI_PCLK_DIV_128, /**< 328.125 KHz */
+    SPI_164_0625KHZ = SPI_PCLK_DIV_256, /**< 164.0625 KHz */
+#endif  // If adding new clock entries, also update HardwareSPI.cpp
+
 } SPIFrequency;
 
 #define MAX_SPI_FREQS 8
