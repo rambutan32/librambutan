@@ -39,7 +39,7 @@
 #include <wirish/wirish.h>
 #include <wirish/boards.h>
 
-#if CYCLES_PER_MICROSECOND != 72
+#if CYCLES_PER_MICROSECOND != 72 && CYCLES_PER_MICROSECOND != 84
 /* TODO [0.2.0?] something smarter than this */
 #warning "Unexpected clock speed; SPI frequency calculation will be incorrect"
 #endif
@@ -123,7 +123,7 @@ void HardwareSPI::begin(SPIFrequency frequency, uint32 bitOrder, uint32 mode) {
 }
 
 void HardwareSPI::begin(void) {
-    this->begin(SPI_1_125MHZ, MSBFIRST, 0);
+    this->begin(SPI_PCLK_DIV_32, MSBFIRST, 0);  // 1.125 MHz for a 72 MHz board
 }
 
 void HardwareSPI::beginSlave(uint32 bitOrder, uint32 mode) {
@@ -333,8 +333,8 @@ static const spi_baud_rate baud_rates[MAX_SPI_FREQS] __FLASH__ = {
  * (CYCLES_PER_MICROSECOND == 72, APB2 at 72MHz, APB1 at 36MHz).
  */
 static spi_baud_rate determine_baud_rate(spi_dev *dev, SPIFrequency freq) {
-    if (rcc_dev_clk(dev->clk_id) == RCC_APB2 && freq == SPI_140_625KHZ) {
-        /* APB2 peripherals are too fast for 140.625 KHz */
+    if (rcc_dev_clk(dev->clk_id) == RCC_APB2 && freq == SPI_PCLK_DIV_256) {
+        /* APB2 peripherals are too fast for the largest divider */
         ASSERT(0);
         return (spi_baud_rate)~0;
     }
