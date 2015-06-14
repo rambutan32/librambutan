@@ -34,10 +34,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::nvic_irq_num
 
-STM32F2 Targets
-~~~~~~~~~~~~~~~
+STM32F2-F4 Targets
+~~~~~~~~~~~~~~~~~~
 
-.. doxygenenum:: stm32f2::nvic_irq_num
+.. doxygenenum:: stm32f2_f4::nvic_irq_num
 
 Functions
 ---------

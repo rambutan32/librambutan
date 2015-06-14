@@ -100,10 +100,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::adc_extsel_event
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::adc_extsel_event
+.. doxygenenum:: stm32f2_f4::adc_extsel_event
 
 ADC Clock Prescaler
 ~~~~~~~~~~~~~~~~~~~
@@ -130,10 +130,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::adc_prescaler
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::adc_prescaler
+.. doxygenenum:: stm32f2_f4::adc_prescaler
 
 .. _adc-adc_set_sample_rate:
 
@@ -170,10 +170,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::adc_smp_rate
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::adc_smp_rate
+.. doxygenenum:: stm32f2_f4::adc_smp_rate
 
 Miscellaneous
 ~~~~~~~~~~~~~
@@ -211,12 +211,12 @@ pointers are ``ADC1_BASE``, ``ADC2_BASE``, and ``ADC3_BASE``.
 .. _adc-adc_reg_map:
 .. doxygenstruct:: adc_reg_map
 
-On **STM32F2 targets**, there is an additional common set of registers
+On **STM32F2-F4 targets**, there is an additional common set of registers
 shared by all ADC peripherals. Its base pointer is
 ``ADC_COMMON_BASE``.
 
 .. _adc-adc_common_reg_map:
-.. doxygenstruct:: stm32f2::adc_common_reg_map
+.. doxygenstruct:: stm32f2_f4::adc_common_reg_map
 
 Register Bit Definitions
 ------------------------

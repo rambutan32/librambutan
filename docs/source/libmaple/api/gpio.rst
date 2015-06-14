@@ -16,7 +16,7 @@ Types
 .. TODO: seperate stm32f1/stm32f2 families correctly
 
 .. doxygenstruct:: stm32f1::gpio_reg_map
-.. doxygenstruct:: stm32f2::gpio_reg_map
+.. doxygenstruct:: stm32f2_f4::gpio_reg_map
 .. doxygenstruct:: gpio_dev
 .. doxygenenum:: gpio_pin_mode
 

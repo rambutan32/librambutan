@@ -22,7 +22,7 @@ timer_reg_map`` ties it all together.
 
 .. doxygenstruct:: timer_adv_reg_map
 .. doxygenstruct:: stm32f1::timer_gen_reg_map
-.. doxygenstruct:: stm32f2::timer_gen_reg_map
+.. doxygenstruct:: stm32f2_f4::timer_gen_reg_map
 .. doxygenstruct:: timer_bas_reg_map
 .. doxygenunion:: timer_reg_map
 .. doxygenenum:: timer_type

@@ -44,10 +44,10 @@ STM32F1 targets
 
 .. doxygenstruct:: stm32f1::flash_reg_map
 
-STM32F2 targets
-~~~~~~~~~~~~~~~
+STM32F2-F4 targets
+~~~~~~~~~~~~~~~~~~
 
-.. doxygenstruct:: stm32f2::flash_reg_map
+.. doxygenstruct:: stm32f2_f4::flash_reg_map
 
 Register Bit Definitions
 ------------------------
@@ -124,8 +124,8 @@ STM32F1 Targets
     #define FLASH_OBR_RDPRT                 (1U << FLASH_OBR_RDPRT_BIT)
     #define FLASH_OBR_OPTERR                (1U << FLASH_OBR_OPTERR_BIT)
 
-STM32F2 Targets
-~~~~~~~~~~~~~~~
+STM32F2-F4 Targets
+~~~~~~~~~~~~~~~~~~
 
 ::
 

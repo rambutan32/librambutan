@@ -16,7 +16,7 @@ Types
 
 .. doxygenstruct:: dac_dev
 .. doxygenstruct:: stm32f1::dac_reg_map
-.. doxygenstruct:: stm32f2::dac_reg_map
+.. doxygenstruct:: stm32f2_f4::dac_reg_map
 
 Devices
 -------

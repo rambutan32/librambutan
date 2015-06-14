@@ -57,10 +57,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::rcc_clk_id
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::rcc_clk_id
+.. doxygenenum:: stm32f2_f4::rcc_clk_id
 
 .. _libmaple-rcc-rcc_sysclk_src:
 
@@ -102,10 +102,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::rcc_clk
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::rcc_clk
+.. doxygenenum:: stm32f2_f4::rcc_clk
 
 .. _libmaple-rcc-rcc_clk_domain:
 
@@ -133,10 +133,10 @@ STM32F1 Targets
 
 .. doxygenenum:: stm32f1::rcc_clk_domain
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::rcc_clk_domain
+.. doxygenenum:: stm32f2_f4::rcc_clk_domain
 
 .. _libmaple-rcc-rcc_prescaler:
 
@@ -194,16 +194,16 @@ This just contains an ``rcc_pll_multiplier``.
 
 .. doxygenstruct:: stm32f1::stm32f1_rcc_pll_data
 
-rcc_pll_cfg on STM32F2 Targets
-++++++++++++++++++++++++++++++
+rcc_pll_cfg on STM32F2-F4 Targets
++++++++++++++++++++++++++++++++++
 
 The ``pllsrc`` field is chosen from the following.
 
-.. doxygenenum:: stm32f2::rcc_pllsrc
+.. doxygenenum:: stm32f2_f4::rcc_pllsrc
 
 The ``data`` field must point to a ``struct stm32f2_rcc_pll_data``.
 
-.. doxygenstruct:: stm32f2::stm32f2_rcc_pll_data
+.. doxygenstruct:: stm32f2_f4::stm32f2_rcc_pll_data
 
 .. _libmaple-rcc-clk-funcs:
 
@@ -274,16 +274,16 @@ STM32F1 Targets
 .. doxygenenum:: stm32f1::rcc_apb2_divider
 .. doxygenenum:: stm32f1::rcc_ahb_divider
 
-STM32F2 Targets
-+++++++++++++++
+STM32F2-F4 Targets
+++++++++++++++++++
 
-.. doxygenenum:: stm32f2::rcc_prescaler
-.. doxygenenum:: stm32f2::rcc_mco2_divider
-.. doxygenenum:: stm32f2::rcc_mco1_divider
-.. doxygenenum:: stm32f2::rcc_rtc_divider
-.. doxygenenum:: stm32f2::rcc_apb2_divider
-.. doxygenenum:: stm32f2::rcc_apb1_divider
-.. doxygenenum:: stm32f2::rcc_ahb_divider
+.. doxygenenum:: stm32f2_f4::rcc_prescaler
+.. doxygenenum:: stm32f2_f4::rcc_mco2_divider
+.. doxygenenum:: stm32f2_f4::rcc_mco1_divider
+.. doxygenenum:: stm32f2_f4::rcc_rtc_divider
+.. doxygenenum:: stm32f2_f4::rcc_apb2_divider
+.. doxygenenum:: stm32f2_f4::rcc_apb1_divider
+.. doxygenenum:: stm32f2_f4::rcc_ahb_divider
 
 Register Maps
 -------------
@@ -297,10 +297,10 @@ STM32F1 Targets
 
 .. doxygenstruct:: stm32f1::rcc_reg_map
 
-STM32F2 Targets
-~~~~~~~~~~~~~~~
+STM32F2-F4 Targets
+~~~~~~~~~~~~~~~~~~
 
-.. doxygenstruct:: stm32f2::rcc_reg_map
+.. doxygenstruct:: stm32f2_f4::rcc_reg_map
 
 Register Bit Definitions
 ------------------------
