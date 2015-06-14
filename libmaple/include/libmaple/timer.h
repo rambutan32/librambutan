@@ -358,9 +358,15 @@ extern timer_dev *TIMER14;
 /* Capture/compare mode registers, common values */
 
 #define TIMER_CCMR_CCS_OUTPUT           0x0
-#define TIMER_CCMR_CCS_INPUT_TI1        0x1
-#define TIMER_CCMR_CCS_INPUT_TI2        0x2
 #define TIMER_CCMR_CCS_INPUT_TRC        0x3
+#define TIMER_CCMR_CCS1S_INPUT_TI1      0x1
+#define TIMER_CCMR_CCS1S_INPUT_TI2      0x2
+#define TIMER_CCMR_CCS2S_INPUT_TI1      0x2
+#define TIMER_CCMR_CCS2S_INPUT_TI2      0x1
+#define TIMER_CCMR_CCS3S_INPUT_TI1      0x1
+#define TIMER_CCMR_CCS3S_INPUT_TI2      0x2
+#define TIMER_CCMR_CCS4S_INPUT_TI1      0x2
+#define TIMER_CCMR_CCS4S_INPUT_TI2      0x1
 
 /* Capture/compare mode register 1 (CCMR1) */
 
@@ -379,8 +385,8 @@ extern timer_dev *TIMER14;
 #define TIMER_CCMR1_IC2PSC              (0x3 << 10)
 #define TIMER_CCMR1_CC2S                (0x3 << 8)
 #define TIMER_CCMR1_CC2S_OUTPUT         (TIMER_CCMR_CCS_OUTPUT << 8)
-#define TIMER_CCMR1_CC2S_INPUT_TI1      (TIMER_CCMR_CCS_INPUT_TI1 << 8)
-#define TIMER_CCMR1_CC2S_INPUT_TI2      (TIMER_CCMR_CCS_INPUT_TI2 << 8)
+#define TIMER_CCMR1_CC2S_INPUT_TI1      (TIMER_CCMR_CCS2S_INPUT_TI1 << 8)
+#define TIMER_CCMR1_CC2S_INPUT_TI2      (TIMER_CCMR_CCS2S_INPUT_TI2 << 8)
 #define TIMER_CCMR1_CC2S_INPUT_TRC      (TIMER_CCMR_CCS_INPUT_TRC << 8)
 #define TIMER_CCMR1_OC1CE               (1U << TIMER_CCMR1_OC1CE_BIT)
 #define TIMER_CCMR1_OC1M                (0x3 << 4)
@@ -390,8 +396,8 @@ extern timer_dev *TIMER14;
 #define TIMER_CCMR1_IC1PSC              (0x3 << 2)
 #define TIMER_CCMR1_CC1S                0x3
 #define TIMER_CCMR1_CC1S_OUTPUT         TIMER_CCMR_CCS_OUTPUT
-#define TIMER_CCMR1_CC1S_INPUT_TI1      TIMER_CCMR_CCS_INPUT_TI1
-#define TIMER_CCMR1_CC1S_INPUT_TI2      TIMER_CCMR_CCS_INPUT_TI2
+#define TIMER_CCMR1_CC1S_INPUT_TI1      TIMER_CCMR_CCS1S_INPUT_TI1
+#define TIMER_CCMR1_CC1S_INPUT_TI2      TIMER_CCMR_CCS1S_INPUT_TI2
 #define TIMER_CCMR1_CC1S_INPUT_TRC      TIMER_CCMR_CCS_INPUT_TRC
 
 /* Capture/compare mode register 2 (CCMR2) */
@@ -411,8 +417,8 @@ extern timer_dev *TIMER14;
 #define TIMER_CCMR2_IC4PSC              (0x3 << 10)
 #define TIMER_CCMR2_CC4S                (0x3 << 8)
 #define TIMER_CCMR2_CC4S_OUTPUT         (TIMER_CCMR_CCS_OUTPUT << 8)
-#define TIMER_CCMR2_CC4S_INPUT_TI1      (TIMER_CCMR_CCS_INPUT_TI1 << 8)
-#define TIMER_CCMR2_CC4S_INPUT_TI2      (TIMER_CCMR_CCS_INPUT_TI2 << 8)
+#define TIMER_CCMR2_CC4S_INPUT_TI1      (TIMER_CCMR_CCS4S_INPUT_TI1 << 8)
+#define TIMER_CCMR2_CC4S_INPUT_TI2      (TIMER_CCMR_CCS4S_INPUT_TI2 << 8)
 #define TIMER_CCMR2_CC4S_INPUT_TRC      (TIMER_CCMR_CCS_INPUT_TRC << 8)
 #define TIMER_CCMR2_OC3CE               (1U << TIMER_CCMR2_OC3CE_BIT)
 #define TIMER_CCMR2_OC3M                (0x3 << 4)
@@ -422,8 +428,8 @@ extern timer_dev *TIMER14;
 #define TIMER_CCMR2_IC3PSC              (0x3 << 2)
 #define TIMER_CCMR2_CC3S                0x3
 #define TIMER_CCMR2_CC3S_OUTPUT         TIMER_CCMR_CCS_OUTPUT
-#define TIMER_CCMR2_CC3S_INPUT_TI1      TIMER_CCMR_CCS_INPUT_TI1
-#define TIMER_CCMR2_CC3S_INPUT_TI2      TIMER_CCMR_CCS_INPUT_TI2
+#define TIMER_CCMR2_CC3S_INPUT_TI1      TIMER_CCMR_CCS3S_INPUT_TI1
+#define TIMER_CCMR2_CC3S_INPUT_TI2      TIMER_CCMR_CCS3S_INPUT_TI2
 #define TIMER_CCMR2_CC3S_INPUT_TRC      TIMER_CCMR_CCS_INPUT_TRC
 
 /* Capture/compare enable register (CCER) */
@@ -1039,7 +1045,9 @@ static inline void timer_oc_set_mode(timer_dev *dev,
 /*
  * Old, erroneous bit definitions from previous releases, kept for
  * backwards compatibility:
+ *
  */
+/* FIXME: deprecated, remove in [0.1.0] */
 
 /** Deprecated. Use TIMER_CCMR1_CC4S_OUTPUT instead. */
 #define TIMER_CCMR1_CC4S_OUTPUT    TIMER_CCMR2_CC4S_OUTPUT
