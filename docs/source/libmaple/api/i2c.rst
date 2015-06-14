@@ -23,7 +23,8 @@ level 0).  Other interrupt priorities are set lower.
 Types
 -----
 
-.. doxygenstruct:: i2c_reg_map
+.. doxygenstruct:: stm32f1::i2c_reg_map
+.. doxygenstruct:: stm32f2_f4::i2c_reg_map
 .. doxygenenum:: i2c_state
 .. doxygenstruct:: i2c_msg
 .. doxygenstruct:: i2c_dev
