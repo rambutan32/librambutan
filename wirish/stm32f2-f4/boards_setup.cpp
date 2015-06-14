@@ -25,12 +25,12 @@
  *****************************************************************************/
 
 /**
- * @file wirish/stm32f2/boards_setup.cpp
+ * @file wirish/stm32f2-f4/boards_setup.cpp
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief STM32F2 chip setup.
+ * @brief STM32F2-F4 chip setup.
  *
- * This file controls how init() behaves on the STM32F2. Be very
- * careful when changing anything here. Many of these values depend
+ * This file controls how init() behaves on the STM32F2 through STM32F4.
+ * Be very careful when changing anything here. Many of these values depend
  * upon each other.
  */
 

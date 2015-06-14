@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /*
- * STM32F2 implementations for basic GPIO functionality.
+ * STM32F2-F4 implementations for basic GPIO functionality.
  */
 
 #include <wirish/io.h>

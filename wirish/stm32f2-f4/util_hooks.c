@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /*
- * STM32F2 implementations for libmaple util.c hooks
+ * STM32F2-F4 implementations for libmaple util.c hooks
  * FIXME these are just minimal stubs
  */
 

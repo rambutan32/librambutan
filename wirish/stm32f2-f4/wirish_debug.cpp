@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file wirish/stm32f2/wirish_debug.cpp
+ * @file wirish/stm32f2-f4/wirish_debug.cpp
  * @brief High level debug port configuration
  */
 
