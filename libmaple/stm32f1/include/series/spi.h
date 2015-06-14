@@ -68,9 +68,10 @@ extern struct spi_dev *SPI3;
 
 /* spi_gpio_cfg(): Backwards compatibility shim to spi_config_gpios() */
 struct gpio_dev;
-extern void spi_config_gpios(struct spi_dev*, uint8,
-                             struct gpio_dev*, uint8,
-                             struct gpio_dev*, uint8, uint8, uint8);
+extern void spi_config_gpios(struct spi_dev *dev, uint8 as_master,
+                             struct gpio_dev *nss_dev, uint8 nss_bit,
+                             struct gpio_dev *comm_dev, uint8 sck_bit,
+                             uint8 miso_bit, uint8 mosi_bit);
 /**
  * @brief Deprecated. Use spi_config_gpios() instead.
  * @see spi_config_gpios()
