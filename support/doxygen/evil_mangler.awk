@@ -16,7 +16,7 @@
 
 BEGIN {
     # For extracting series component from header FILENAME.
-    series_regex = "/stm32[flw][0-9]*/";
+    series_regex = "/stm32[flw][0-9]*-?[flw]?[0-9]*/";
     # Holds header FILENAME. Cargo-culted; not sure why it's necessary.
     f = "";
     # Holds series component.
@@ -27,6 +27,7 @@ BEGIN {
         f = FILENAME;
         match(f, series_regex);
         series = substr(f, RSTART + 1, RLENGTH - 2);
+        sub(/-/, "_", series);
         printf("namespace %s {\n", series);
     }
     print;
