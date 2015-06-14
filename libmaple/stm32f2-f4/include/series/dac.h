@@ -26,11 +26,11 @@
 
 /**
  * @file libmaple/stm32f2-f4/include/series/dac.h
- * @brief STM32F2 DAC support
+ * @brief STM32F2-F4 DAC support
  */
 
-#ifndef _LIBMAPLE_STM32F2_DAC_H_
-#define _LIBMAPLE_STM32F2_DAC_H_
+#ifndef _LIBMAPLE_STM32F2F4_DAC_H_
+#define _LIBMAPLE_STM32F2F4_DAC_H_
 
 #ifdef __cplusplus
 extern "C"{
@@ -42,7 +42,7 @@ extern "C"{
  * Register map type
  */
 
-/** STM32F2 DAC register map type. */
+/** STM32F2-F4 DAC register map type. */
 typedef struct dac_reg_map {
     __io uint32 CR;      /**< Control register */
     __io uint32 SWTRIGR; /**< Software trigger register */

@@ -27,11 +27,11 @@
 /**
  * @file   libmaple/stm32f2-f4/include/series/timer.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief  STM32F2 timer support.
+ * @brief  STM32F2-F4 timer support.
  */
 
-#ifndef _LIBMAPLE_STM32F2_TIMER_H_
-#define _LIBMAPLE_STM32F2_TIMER_H_
+#ifndef _LIBMAPLE_STM32F2F4_TIMER_H_
+#define _LIBMAPLE_STM32F2F4_TIMER_H_
 
 #include <libmaple/libmaple_types.h>
 #include <libmaple/gpio.h>      /* for gpio_af */
@@ -41,7 +41,7 @@
  */
 
 /**
- * @brief STM32F2 general purpose timer register map type
+ * @brief STM32F2-F4 general purpose timer register map type
  *
  * Note that not all general purpose timers have all of these
  * registers. Consult your chip's reference manual for the details.

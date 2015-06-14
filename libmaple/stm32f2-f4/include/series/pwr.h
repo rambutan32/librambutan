@@ -27,11 +27,11 @@
 /**
  * @file libmaple/stm32f2-f4/include/series/pwr.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief STM32F2 Power control (PWR) support.
+ * @brief STM32F2-F4 Power control (PWR) support.
  */
 
-#ifndef _LIBMAPLE_STM32F2_PWR_H_
-#define _LIBMAPLE_STM32F2_PWR_H_
+#ifndef _LIBMAPLE_STM32F2F4_PWR_H_
+#define _LIBMAPLE_STM32F2F4_PWR_H_
 
 /*
  * Additional register bits
@@ -41,11 +41,11 @@
 
 /**
  * @brief Flash power down in stop mode bit.
- * Availability: STM32F2 */
+ * Availability: STM32F2-F4 */
 #define PWR_CR_FPDS_BIT                 9
 /**
  * @brief Flash power down in stop mode.
- * Availability: STM32F2 */
+ * Availability: STM32F2-F4 */
 #define PWR_CR_FPDS                     (1U << PWR_CR_FPDS_BIT)
 
 /* PVD level selection */

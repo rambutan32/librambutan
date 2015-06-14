@@ -26,11 +26,11 @@
 
 /**
  * @file libmaple/stm32f1/include/series/exti.h
- * @brief STM32F2 external interrupts
+ * @brief STM32F2-F4 external interrupts
  */
 
-#ifndef _LIBMAPLE_STM32F2_EXTI_H_
-#define _LIBMAPLE_STM32F2_EXTI_H_
+#ifndef _LIBMAPLE_STM32F2F4_EXTI_H_
+#define _LIBMAPLE_STM32F2F4_EXTI_H_
 
 #ifdef __cpluspus
 extern "C" {

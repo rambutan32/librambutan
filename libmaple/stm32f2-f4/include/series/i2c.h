@@ -26,8 +26,8 @@
  * SOFTWARE.
  *****************************************************************************/
 
-#ifndef _LIBMAPLE_STM32F2_I2C_H_
-#define _LIBMAPLE_STM32F2_I2C_H_
+#ifndef _LIBMAPLE_STM32F2F4_I2C_H_
+#define _LIBMAPLE_STM32F2F4_I2C_H_
 
 #include <libmaple/i2c_common.h>
 #include <libmaple/stm32.h>

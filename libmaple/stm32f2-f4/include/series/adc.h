@@ -27,11 +27,11 @@
 /**
  * @file libmaple/stm32f2-f4/include/series/adc.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>,
- * @brief STM32F2 ADC support.
+ * @brief STM32F2-F4 ADC support.
  */
 
-#ifndef _LIBMAPLE_STM32F2_ADC_H_
-#define _LIBMAPLE_STM32F2_ADC_H_
+#ifndef _LIBMAPLE_STM32F2F4_ADC_H_
+#define _LIBMAPLE_STM32F2F4_ADC_H_
 
 #include <libmaple/libmaple_types.h>
 
@@ -281,7 +281,7 @@ typedef struct adc_common_reg_map {
  */
 
 /**
- * @brief STM32F2 external event selectors for regular group
+ * @brief STM32F2-F4 external event selectors for regular group
  *        conversion.
  * @see adc_set_extsel()
  */
@@ -305,7 +305,7 @@ typedef enum adc_extsel_event {
 } adc_extsel_event;
 
 /**
- * @brief STM32F2 sample times, in ADC clock cycles.
+ * @brief STM32F2-F4 sample times, in ADC clock cycles.
  */
 typedef enum adc_smp_rate {
     ADC_SMPR_3,                 /**< 3 ADC cycles */
@@ -319,7 +319,7 @@ typedef enum adc_smp_rate {
 } adc_smp_rate;
 
 /**
- * @brief STM32F2 ADC prescalers, as divisors of PCLK2.
+ * @brief STM32F2-F4 ADC prescalers, as divisors of PCLK2.
  */
 typedef enum adc_prescaler {
     /** PCLK2 divided by 2 */

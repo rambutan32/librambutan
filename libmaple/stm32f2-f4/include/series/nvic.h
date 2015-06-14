@@ -26,18 +26,18 @@
 
 /**
  * @file libmaple/stm32f2-f4/include/series/nvic.h
- * @brief STM32F2 nested vectored interrupt controller (NVIC) header.
+ * @brief STM32F2-F4 nested vectored interrupt controller (NVIC) header.
  */
 
-#ifndef _LIBMAPLE_STM32F2_NVIC_H_
-#define _LIBMAPLE_STM32F2_NVIC_H_
+#ifndef _LIBMAPLE_STM32F2F4_NVIC_H_
+#define _LIBMAPLE_STM32F2F4_NVIC_H_
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 /**
- * @brief STM32F2 interrupt vector table interrupt numbers.
+ * @brief STM32F2-F4 interrupt vector table interrupt numbers.
  */
 typedef enum nvic_irq_num {
     NVIC_NMI                    = -14, /**< Non-maskable interrupt */

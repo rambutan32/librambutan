@@ -26,15 +26,15 @@
 
 /**
  * @file libmaple/stm32f2-f4/include/series/flash.h
- * @brief STM32F2 Flash header.
+ * @brief STM32F2-F4 Flash header.
  *
  * Provides register map, base pointer, and register bit definitions
- * for the Flash controller on the STM32F2 series, along with
+ * for the Flash controller on the STM32F2-F4 series, along with
  * series-specific configuration values.
  */
 
-#ifndef _LIBMAPLE_STM32F2_FLASH_H_
-#define _LIBMAPLE_STM32F2_FLASH_H_
+#ifndef _LIBMAPLE_STM32F2F4_FLASH_H_
+#define _LIBMAPLE_STM32F2F4_FLASH_H_
 
 #ifdef __cplusplus
 extern "C"{
@@ -46,7 +46,7 @@ extern "C"{
  * Register map
  */
 
-/** @brief STM32F2 Flash register map type */
+/** @brief STM32F2-F4 Flash register map type */
 typedef struct flash_reg_map {
     __io uint32 ACR;            /**< Access control register */
     __io uint32 KEYR;           /**< Key register */

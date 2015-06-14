@@ -27,11 +27,11 @@
 /**
  * @file libmaple/stm32f2-f4/include/series/dma.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief STM32F2 DMA series header
+ * @brief STM32F2-F4 DMA series header
  */
 
-#ifndef _LIBMAPLE_STM32F2_DMA_H_
-#define _LIBMAPLE_STM32F2_DMA_H_
+#ifndef _LIBMAPLE_STM32F2F4_DMA_H_
+#define _LIBMAPLE_STM32F2F4_DMA_H_
 
 #ifdef __cplusplus
 extern "C"{
@@ -45,7 +45,7 @@ extern "C"{
  */
 
 /**
- * @brief STM32F2 DMA register map type.
+ * @brief STM32F2-F4 DMA register map type.
  */
 typedef struct dma_reg_map {
     /* Isn't it nice how on F1, it's CCR1, but on F2, it's S1CR? */
@@ -119,7 +119,7 @@ typedef struct dma_reg_map {
 #define DMA2_BASE                       ((struct dma_reg_map*)0x40026400)
 
 /**
- * @brief STM32F2 DMA stream (i.e. tube) register map type.
+ * @brief STM32F2-F4 DMA stream (i.e. tube) register map type.
  * Provides access to an individual stream's registers.
  * @see dma_tube_regs()
  */
@@ -457,11 +457,11 @@ typedef enum dma_stream {
     DMA_S7 = 7,
 } dma_stream;
 
-/** STM32F2 dma_tube (=dma_stream) */
+/** STM32F2-F4 dma_tube (=dma_stream) */
 #define dma_tube dma_stream
 
 /**
- * @brief STM32F2 configuration flags for dma_tube_config.
+ * @brief STM32F2-F4 configuration flags for dma_tube_config.
  * @see struct dma_tube_config
  */
 typedef enum dma_cfg_flags {
@@ -503,7 +503,7 @@ typedef enum dma_cfg_flags {
 } dma_cfg_flags;
 
 /**
- * @brief STM32F2 DMA request sources.
+ * @brief STM32F2-F4 DMA request sources.
  *
  * IMPORTANT:
  *

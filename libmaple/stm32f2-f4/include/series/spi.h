@@ -27,11 +27,11 @@
 /**
  * @file libmaple/stm32f2-f4/include/series/spi.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief STM32F2 SPI/I2S series header.
+ * @brief STM32F2-F4 SPI/I2S series header.
  */
 
-#ifndef _LIBMAPLE_STM32F2_SPI_H_
-#define _LIBMAPLE_STM32F2_SPI_H_
+#ifndef _LIBMAPLE_STM32F2F4_SPI_H_
+#define _LIBMAPLE_STM32F2F4_SPI_H_
 
 #include <libmaple/gpio.h>      /* for gpio_af */
 

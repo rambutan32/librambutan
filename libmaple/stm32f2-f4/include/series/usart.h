@@ -27,11 +27,11 @@
 /**
  * @file libmaple/stm32f2-f4/include/series/usart.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
- * @brief STM32F2 USART support.
+ * @brief STM32F2-F4 USART support.
  */
 
-#ifndef _LIBMAPLE_STM32F2_USART_H_
-#define _LIBMAPLE_STM32F2_USART_H_
+#ifndef _LIBMAPLE_STM32F2F4_USART_H_
+#define _LIBMAPLE_STM32F2F4_USART_H_
 
 #ifdef __cplusplus
 extern "C"{
