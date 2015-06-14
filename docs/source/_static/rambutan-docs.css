@@ -106,12 +106,15 @@ pre, tt {
 }
 
 tt {
-    font-size: 80%;
-    background: #f4f4f4;
+    background: none;
+    border-bottom: none;
+    color: #222;
+    font-size: 0.8em;
 }
 
-.note tt {
-    background: #ececec;
+.note tt, .warning tt {
+    /* Overrides better.css */
+    background: none;
 }
 
 a tt {
@@ -157,9 +160,19 @@ tt.descname {
     font-size: 0.8em;
 }
 
-dl.function > dt, dl.class > dt, dl.method > dt, dl.attribute > dt, dl.data > dt, dl.classmethod > dt, dl.enum > dt {
+dl.function > dt, dl.class > dt, dl.method > dt, dl.attribute > dt, dl.data > dt, dl.classmethod > dt, dl.enum > dt, dl.struct > dt {
     margin-bottom: 0.5em;
     background: #f4f4f4;
+}
+dl.define {
+    margin-top: 0.0em;
+    margin-bottom: 0.0em;
+}
+
+dl.define > dt > strong {
+    font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
+    /* font-weight: normal; */
+    font-size: 0.8em;
 }
 
 dl li > p {
