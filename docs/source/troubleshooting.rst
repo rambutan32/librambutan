@@ -155,6 +155,32 @@ Ubuntu 9.10, this goes a little something like::
   $ sudo rmmod cdc-acm
   $ sudo insmod /lib/modules/2.6.31-20-generic/kernel/drivers/usb/class/cdc-acm.ko
 
+[Linux] ``bash: arm-none-eabi-gdb: No such file or directory``
+---------------------------------------------------------------
+
+Assuming the ``gdb`` executable actually exists and is on your ``$PATH``, this
+is usually due to the executable not matching the host computer's instruction
+set: for example, you are on a 64-bit machine trying to run a 32-bit
+executable, and are missing some 32-bit libraries. You might need to do the
+"multiarch" dance if you are on a Debian-based distribution.
+
+For more details see this `Ubuntu Q&A entry
+<http://askubuntu.com/questions/133389/no-such-file-or-directory-but-the-file-exists>`_.
+
+[Linux] ``arm-none-eabi-gdb: error while loading shared libraries``
+-------------------------------------------------------------------
+
+The full text is usually something like::
+
+    arm-none-eabi-gdb: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory
+
+You need to install ``libncurses5:i386`` (the 32-bit version of this library),
+because the ``arm-none-eabi-*`` toolchain you are using is compiled for a
+32-bit host (eg, i386) and you are on an 64-bit host (eg, x86_64). The reason
+you didn't run in to this earlier while compiling is that most of the toolchain
+doesn't require ``ncurses`` or other libraries, but ``gdb`` (the debugger)
+does.
+
 .. _troubleshooting-tips-tricks:
 
 ===============
