@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/include/series/spi.h
+ * @file libmaple/stm32f2-f4/include/series/spi.h
  * @author Marti Bolivar <mbolivar@leaflabs.com>
  * @brief STM32F2 SPI/I2S series header.
  */

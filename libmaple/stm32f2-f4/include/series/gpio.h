@@ -25,7 +25,7 @@
 *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/include/series/gpio.h
+ * @file libmaple/stm32f2-f4/include/series/gpio.h
  * @brief STM32F2 GPIO support.
  */
 

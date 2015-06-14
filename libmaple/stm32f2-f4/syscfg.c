@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/syscfg.c
+ * @file libmaple/stm32f2-f4/syscfg.c
  * @brief SYSCFG routines.
  */
 

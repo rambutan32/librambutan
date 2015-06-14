@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/include/series/dac.h
+ * @file libmaple/stm32f2-f4/include/series/dac.h
  * @brief STM32F2 DAC support
  */
 

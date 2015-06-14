@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/spi.c
+ * @file libmaple/stm32f2-f4/spi.c
  * @author Marti Bolivar <mbolivar@leaflabs.com>
  * @brief STM32F2 SPI/I2S.
  */

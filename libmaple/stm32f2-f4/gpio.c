@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/gpio.c
+ * @file libmaple/stm32f2-f4/gpio.c
  * @brief STM32F2 GPIO.
  */
 

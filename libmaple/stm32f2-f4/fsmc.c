@@ -25,7 +25,7 @@
  *****************************************************************************/
 
 /**
- * @file libmaple/stm32f2/fsmc.c
+ * @file libmaple/stm32f2-f4/fsmc.c
  * @author Marti Bolivar <mbolivar@leaflabs.com>
  * @brief STM32F2 FSMC support.
  */
